@@ -20,12 +20,12 @@ from ethereum_test_tools import Macros as Om
 from ethereum_test_tools import Opcodes as Op
 from ethereum_test_types import Requests
 
-from .helpers import (
-    ConsolidationRequest,
-    ConsolidationRequestTransaction,
-)
+from .helpers import ConsolidationRequest, ConsolidationRequestTransaction
 from .spec import Spec as Spec_EIP7251
 from .spec import ref_spec_7251
+
+pytest.skip("Arbitrum doesn't support eip7251_consolidations", allow_module_level=True)
+
 
 REFERENCE_SPEC_GIT_PATH: str = ref_spec_7251.git_path
 REFERENCE_SPEC_VERSION: str = ref_spec_7251.version

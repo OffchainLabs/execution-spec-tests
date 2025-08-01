@@ -38,6 +38,8 @@ from ethereum_test_vm import Opcodes as Op
 
 from .spec import Spec, ref_spec_4788
 
+pytest.skip("Arbitrum doesn't support eip4788_beacon_root", allow_module_level=True)
+
 REFERENCE_SPEC_GIT_PATH = ref_spec_4788.git_path
 REFERENCE_SPEC_VERSION = ref_spec_4788.version
 
