@@ -427,7 +427,7 @@ class ProgramChainid(ScenarioTestProgram):
 
     def result(self) -> ProgramResult:
         """Test result."""
-        return ProgramResult(result=1, from_fork=Istanbul)
+        return ProgramResult(result=412346, from_fork=Istanbul)
 
 
 class ProgramSelfbalance(ScenarioTestProgram):

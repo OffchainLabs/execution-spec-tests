@@ -27,6 +27,8 @@ from ethereum_test_tools.vm.opcode import Opcodes as Op
 
 from .spec import ref_spec_4895
 
+pytest.skip("Arbitrum doesn't support eip4895_withdrawals", allow_module_level=True)
+
 REFERENCE_SPEC_GIT_PATH = ref_spec_4895.git_path
 REFERENCE_SPEC_VERSION = ref_spec_4895.version
 

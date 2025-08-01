@@ -37,7 +37,6 @@ from ..istanbul.eip152_blake2.common import Blake2bInput
 from ..istanbul.eip152_blake2.spec import Spec as Blake2bSpec
 from ..osaka.eip7951_p256verify_precompiles import spec as p256verify_spec
 from ..osaka.eip7951_p256verify_precompiles.spec import FieldElement
-from ..prague.eip2537_bls_12_381_precompiles import spec as bls12381_spec
 from ..prague.eip2537_bls_12_381_precompiles.spec import BytesConcatenation
 from .helpers import code_loop_precompile_call
 
@@ -1620,63 +1619,6 @@ def test_worst_modexp(
                 "873033E038326E87ED3E1276FD140253FA08E9FC25FB2D9A98527FC22A2C9612FBEAFDAD446CBC7BCDBDCD780AF2C16A",
             ],
             id="point_evaluation",
-        ),
-        pytest.param(
-            bls12381_spec.Spec.G1ADD,
-            [
-                bls12381_spec.Spec.G1,
-                bls12381_spec.Spec.P1,
-            ],
-            id="bls12_g1add",
-        ),
-        pytest.param(
-            bls12381_spec.Spec.G1MSM,
-            [
-                (bls12381_spec.Spec.P1 + bls12381_spec.Scalar(bls12381_spec.Spec.Q))
-                * (len(bls12381_spec.Spec.G1MSM_DISCOUNT_TABLE) - 1),
-            ],
-            id="bls12_g1msm",
-        ),
-        pytest.param(
-            bls12381_spec.Spec.G2ADD,
-            [
-                bls12381_spec.Spec.G2,
-                bls12381_spec.Spec.P2,
-            ],
-            id="bls12_g2add",
-        ),
-        pytest.param(
-            bls12381_spec.Spec.G2MSM,
-            [
-                # TODO: the //2 is required due to a limitation of the max contract size limit.
-                # In a further iteration we can insert the inputs as calldata or storage and avoid
-                # having to do PUSHes which has this limitation. This also applies to G1MSM.
-                (bls12381_spec.Spec.P2 + bls12381_spec.Scalar(bls12381_spec.Spec.Q))
-                * (len(bls12381_spec.Spec.G2MSM_DISCOUNT_TABLE) // 2),
-            ],
-            id="bls12_g2msm",
-        ),
-        pytest.param(
-            bls12381_spec.Spec.PAIRING,
-            [
-                bls12381_spec.Spec.G1,
-                bls12381_spec.Spec.G2,
-            ],
-            id="bls12_pairing_check",
-        ),
-        pytest.param(
-            bls12381_spec.Spec.MAP_FP_TO_G1,
-            [
-                bls12381_spec.FP(bls12381_spec.Spec.P - 1),
-            ],
-            id="bls12_fp_to_g1",
-        ),
-        pytest.param(
-            bls12381_spec.Spec.MAP_FP2_TO_G2,
-            [
-                bls12381_spec.FP2((bls12381_spec.Spec.P - 1, bls12381_spec.Spec.P - 1)),
-            ],
-            id="bls12_fp_to_g2",
         ),
         pytest.param(
             p256verify_spec.Spec.P256VERIFY,

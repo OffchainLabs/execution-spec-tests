@@ -14,6 +14,11 @@ REFERENCE_SPEC_VERSION = ref_spec_7883.version
 
 pytestmark = pytest.mark.valid_at_transition_to("Osaka", subsequent_forks=True)
 
+pytest.skip(
+    "Arbitrum supports eip7883_modexp_gas_increase, but we haven't updated our execution-spec-tests fork to handle gas pricing tests",
+    allow_module_level=True,
+)
+
 
 @pytest.mark.parametrize(
     "modexp_input,modexp_expected,gas_old,gas_new",

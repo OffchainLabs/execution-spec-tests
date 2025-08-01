@@ -6,17 +6,14 @@ abstract:  [EIP-7918: Blob base fee bounded by execution cost](https://eips.ethe
 
 import pytest
 
-from ethereum_test_tools import (
-    Alloc,
-    Block,
-    BlockchainTestFiller,
-    Environment,
-)
+from ethereum_test_tools import Alloc, Block, BlockchainTestFiller, Environment
 
 from .spec import ref_spec_7918
 
 REFERENCE_SPEC_GIT_PATH = ref_spec_7918.git_path
 REFERENCE_SPEC_VERSION = ref_spec_7918.version
+
+pytest.skip("Arbitrum doesn't support eip7918_blob_reserve_price", allow_module_level=True)
 
 
 @pytest.mark.valid_at_transition_to("BPO1")

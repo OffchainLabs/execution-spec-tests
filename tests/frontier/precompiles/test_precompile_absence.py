@@ -3,21 +3,19 @@
 import pytest
 
 from ethereum_test_forks import Fork
-from ethereum_test_tools import (
-    Account,
-    Address,
-    Alloc,
-    Bytecode,
-    StateTestFiller,
-    Storage,
-    Transaction,
-)
+from ethereum_test_tools import Account, Address, Alloc, Bytecode
 from ethereum_test_tools import Opcodes as Op
+from ethereum_test_tools import StateTestFiller, Storage, Transaction
 
 UPPER_BOUND = 0x101
 RETURNDATASIZE_OFFSET = 0x10000000000000000  # Must be greater than UPPER_BOUND
 
 
+@pytest.mark.execute(
+    pytest.mark.skip(
+        reason="Known failing https://github.com/ethereum/execution-spec-tests/issues/1700 in `execute remote` mode"
+    )
+)
 @pytest.mark.parametrize(
     "calldata_size",
     [

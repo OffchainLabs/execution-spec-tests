@@ -75,15 +75,7 @@ from ethereum_test_vm import (
     call_return_code,
 )
 
-from .code import (
-    CalldataCase,
-    Case,
-    CodeGasMeasure,
-    Conditional,
-    Initcode,
-    Switch,
-    While,
-)
+from .code import CalldataCase, Case, CodeGasMeasure, Conditional, Initcode, Switch, While
 from .utility.generators import (
     DeploymentTestType,
     generate_system_contract_deploy_test,

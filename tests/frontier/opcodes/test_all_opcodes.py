@@ -97,6 +97,8 @@ def test_all_opcodes(state_test: StateTestFiller, pre: Alloc, fork: Fork):
         ),
     }
 
+    print("bobs your uncle", post)
+
     tx = Transaction(
         sender=pre.fund_eoa(),
         gas_limit=9_000_000,

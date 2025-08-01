@@ -9,10 +9,7 @@ from typing import List, Tuple
 import pytest
 
 from ethereum_test_base_types import Address, HexNumber, ZeroPaddedHexNumber
-from ethereum_test_fixtures.blockchain import (
-    FixtureBlockBase,
-    FixtureHeader,
-)
+from ethereum_test_fixtures.blockchain import FixtureBlockBase, FixtureHeader
 from ethereum_test_forks import Fork
 from ethereum_test_tools import (
     Alloc,
@@ -42,6 +39,8 @@ pytestmark = [
 HEADER_TIMESTAMP = 123456789
 EXTRA_DATA_AT_LIMIT = b"\x00\x00\x00"
 BLOCK_GAS_LIMIT = 100_000_000
+
+pytest.skip("Arbitrum doesn't support eip7934_block_rlp_limit", allow_module_level=True)
 
 
 @pytest.fixture

@@ -2,10 +2,7 @@
 
 import pytest
 
-from ethereum_test_tools import (
-    Address,
-    Alloc,
-)
+from ethereum_test_tools import Address, Alloc
 from ethereum_test_tools.vm.opcode import Opcodes as Op
 from ethereum_test_types import Environment
 
@@ -19,7 +16,7 @@ def post() -> Alloc:
 @pytest.fixture
 def env() -> Environment:
     """Environment fixture with a specified gas limit."""
-    return Environment(gas_limit=100_000_000)
+    return Environment(gas_limit=32_000_000)
 
 
 @pytest.fixture
