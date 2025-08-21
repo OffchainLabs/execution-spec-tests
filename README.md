@@ -1,3 +1,39 @@
+# Arbitrum Execution Spec Tests
+
+This is a fork of https://github.com/ethereum/execution-spec-tests
+
+The Goal of forking Ethereum's Execution Spec tests was to verify that Arbitrum is working as expected well reusing existing tests and infrastructure.
+
+## Instructions on how to run
+
+1. Install and run https://github.com/OffchainLabs/nitro-devnode in terminal 1:
+
+```bash
+git clone https://github.com/OffchainLabs/nitro-devnode.git
+cd nitro-devnode
+./run-dev-node.sh
+```
+
+2. Install the execution spec tests dependencies in terminal 2:
+
+Follow the [Prerequisites](#prerequisites) and [Installation](#installation) sections below to install the required dependencies.
+
+3. Run the execution spec tests in terminal 2 against Arbitrum Nitro:
+
+```bash
+uv run execute remote --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/ --verbose
+```
+
+## Expected Output
+
+[Nitro test results](nitro_test_results.txt) contain the results of running the execution spec tests against Arbitrum Nitro.
+
+The summary is as follows:
+
+```
+========== 448 failed, 2060 passed, 33 skipped in 3900.97s (1:05:00) ===========
+```
+
 # Execution Spec Tests
 
 [![latest version](https://img.shields.io/github/v/release/ethereum/execution-spec-tests)](https://github.com/ethereum/execution-spec-tests/releases/latest)
