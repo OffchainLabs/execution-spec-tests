@@ -1374,7 +1374,7 @@ class Prague(Cancun):
             )
 
         # EIP-2935: Add the history storage contract
-        with open(CURRENT_FOLDER / "contracts" / "history_contract.bin", mode="rb") as f:
+        with open(CURRENT_FOLDER / "contracts" / "history_contract_arbitrum.bin", mode="rb") as f:
             new_allocation.update(
                 {
                     0x0000F90827F1C53A10CB7A02335B175320002935: {
