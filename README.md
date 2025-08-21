@@ -4,6 +4,19 @@ This is a fork of https://github.com/ethereum/execution-spec-tests
 
 The Goal of forking Ethereum's Execution Spec tests was to verify that Arbitrum is working as expected well reusing existing tests and infrastructure.
 
+## Removed EIP's
+- 4788
+- 4844
+- 2537
+- 6110
+- 7002
+- 7251
+- 7685
+- 3651
+- 4895
+
+I believe these EIP's weren't implemented in Arbitrum Nitro, so I removed them from the tests.
+
 ## Instructions on how to run
 
 1. Install and run https://github.com/OffchainLabs/nitro-devnode in terminal 1:
