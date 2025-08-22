@@ -52,7 +52,7 @@ uv run execute remote --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-s
 The summary is as follows:
 
 ```
-========== 448 failed, 2060 passed, 33 skipped in 3900.97s (1:05:00) ===========
+========== 299 failed, 1726 passed, 33 skipped in 3500.29s (0:58:20) ===========
 ```
 
 # Execution Spec Tests
