@@ -1,0 +1,339 @@
+Executing: pytest -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 
+--rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py --verbose
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0 -- /home/kolby/ドキュメント/GitHub/execution-spec-tests/.venv/bin/python3
+[1mGenerating fixtures for: Prague[39;49m
+[1m[93mOnly generating fixtures with stable/deployed forks: Specify an upcoming fork via --until=fork to add forks under development.[39;49m
+[1mStart seed for EOA: 0x9cf5a90b5dfa0d24c19d22c058af0f8db10bba02af36a3a869132dd74948dfe [39;49m
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.13', 'Platform': 'Linux-6.14.0-28-generic-x86_64-with-glibc2.41', 'Packages': {'pytest': '8.4.1', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'custom-report': '1.0.1', 'regex': '0.2.0', 'xdist': '3.8.0', 'metadata': '3.1.1', 'cov': '4.1.0', 'html': '4.1.1'}, 'Command-line args': '<code>fill -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py --verbose</code>', 'Senders': {}}
+rootdir: /home/kolby/ドキュメント/GitHub/execution-spec-tests
+configfile: src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini
+plugins: json-report-1.5.0, custom-report-1.0.1, regex-0.2.0, xdist-3.8.0, metadata-3.1.1, cov-4.1.0, html-4.1.1
+collecting ...  pytest-regex selected 106 tests to run for regex: .*
+collected 106 items
+
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_contract_pointer_loop[fork_Prague-state_test] PASSED [  1/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_pointer[fork_Prague-state_test] PASSED [  2/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_normal[fork_Prague-blockchain_test] PASSED [  3/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_measurements[fork_Prague-blockchain_test] PASSED [  4/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000b-state_test] FAILED [  5/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000c-state_test] FAILED [  6/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000d-state_test] FAILED [  7/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000e-state_test] FAILED [  8/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000f-state_test] FAILED [  9/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000010-state_test] FAILED [ 10/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000011-state_test] FAILED [ 11/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000a-state_test] PASSED [ 12/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000009-state_test] PASSED [ 13/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000005-state_test] PASSED [ 14/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000006-state_test] PASSED [ 15/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000007-state_test] PASSED [ 16/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000008-state_test] PASSED [ 17/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000001-state_test] PASSED [ 18/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000002-state_test] PASSED [ 19/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000003-state_test] PASSED [ 20/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000004-state_test] PASSED [ 21/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000b-state_test] FAILED [ 22/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000c-state_test] FAILED [ 23/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000d-state_test] FAILED [ 24/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000e-state_test] FAILED [ 25/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000f-state_test] FAILED [ 26/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000010-state_test] FAILED [ 27/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000011-state_test] FAILED [ 28/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000a-state_test] PASSED [ 29/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000009-state_test] PASSED [ 30/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000005-state_test] PASSED [ 31/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000006-state_test] PASSED [ 32/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000007-state_test] PASSED [ 33/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000008-state_test] PASSED [ 34/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000001-state_test] PASSED [ 35/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000002-state_test] PASSED [ 36/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000003-state_test] PASSED [ 37/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000004-state_test] PASSED [ 38/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.SEPARATE-access_list_rule_AccessListCall.NONE] PASSED [ 39/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.SEPARATE-access_list_rule_AccessListCall.IN_BOTH_TX] PASSED [ 40/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.SEPARATE-access_list_rule_AccessListCall.IN_NORMAL_TX_ONLY] PASSED [ 41/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.SEPARATE-access_list_rule_AccessListCall.IN_POINTER_TX_ONLY] PASSED [ 42/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.IN_BOTH_TX-access_list_rule_AccessListCall.NONE] PASSED [ 43/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.IN_BOTH_TX-access_list_rule_AccessListCall.IN_BOTH_TX] PASSED [ 44/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.IN_BOTH_TX-access_list_rule_AccessListCall.IN_NORMAL_TX_ONLY] PASSED [ 45/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.IN_BOTH_TX-access_list_rule_AccessListCall.IN_POINTER_TX_ONLY] PASSED [ 46/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.IN_NORMAL_TX_ONLY-access_list_rule_AccessListCall.NONE] PASSED [ 47/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.IN_NORMAL_TX_ONLY-access_list_rule_AccessListCall.IN_BOTH_TX] PASSED [ 48/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.IN_NORMAL_TX_ONLY-access_list_rule_AccessListCall.IN_NORMAL_TX_ONLY] PASSED [ 49/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.IN_NORMAL_TX_ONLY-access_list_rule_AccessListCall.IN_POINTER_TX_ONLY] PASSED [ 50/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.IN_POINTER_TX_ONLY-access_list_rule_AccessListCall.NONE] PASSED [ 51/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.IN_POINTER_TX_ONLY-access_list_rule_AccessListCall.IN_BOTH_TX] PASSED [ 52/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.IN_POINTER_TX_ONLY-access_list_rule_AccessListCall.IN_NORMAL_TX_ONLY] PASSED [ 53/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.POINTER_ADDRESS-pointer_definition_PointerDefinition.IN_POINTER_TX_ONLY-access_list_rule_AccessListCall.IN_POINTER_TX_ONLY] PASSED [ 54/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.SEPARATE-access_list_rule_AccessListCall.NONE] PASSED [ 55/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.SEPARATE-access_list_rule_AccessListCall.IN_BOTH_TX] PASSED [ 56/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.SEPARATE-access_list_rule_AccessListCall.IN_NORMAL_TX_ONLY] PASSED [ 57/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.SEPARATE-access_list_rule_AccessListCall.IN_POINTER_TX_ONLY] PASSED [ 58/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.IN_BOTH_TX-access_list_rule_AccessListCall.NONE] PASSED [ 59/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.IN_BOTH_TX-access_list_rule_AccessListCall.IN_BOTH_TX] PASSED [ 60/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.IN_BOTH_TX-access_list_rule_AccessListCall.IN_NORMAL_TX_ONLY] PASSED [ 61/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.IN_BOTH_TX-access_list_rule_AccessListCall.IN_POINTER_TX_ONLY] PASSED [ 62/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.IN_NORMAL_TX_ONLY-access_list_rule_AccessListCall.NONE] PASSED [ 63/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.IN_NORMAL_TX_ONLY-access_list_rule_AccessListCall.IN_BOTH_TX] PASSED [ 64/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.IN_NORMAL_TX_ONLY-access_list_rule_AccessListCall.IN_NORMAL_TX_ONLY] PASSED [ 65/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.IN_NORMAL_TX_ONLY-access_list_rule_AccessListCall.IN_POINTER_TX_ONLY] PASSED [ 66/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.IN_POINTER_TX_ONLY-access_list_rule_AccessListCall.NONE] PASSED [ 67/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.IN_POINTER_TX_ONLY-access_list_rule_AccessListCall.IN_BOTH_TX] PASSED [ 68/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.IN_POINTER_TX_ONLY-access_list_rule_AccessListCall.IN_NORMAL_TX_ONLY] PASSED [ 69/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_gas_diff_pointer_vs_direct_call[fork_Prague-blockchain_test-access_list_to_AccessListTo.CONTRACT_ADDRESS-pointer_definition_PointerDefinition.IN_POINTER_TX_ONLY-access_list_rule_AccessListCall.IN_POINTER_TX_ONLY] PASSED [ 70/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_call_followed_by_direct_call[fork_Prague-state_test] PASSED [ 71/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_static[fork_Prague-state_test] PASSED [ 72/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_static_to_pointer[fork_Prague-state_test] PASSED [ 73/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_static_reentry[fork_Prague-state_test] PASSED [ 74/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_contract_storage_to_pointer_with_storage[fork_Prague-state_test-call_type_CALL] PASSED [ 75/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_contract_storage_to_pointer_with_storage[fork_Prague-state_test-call_type_DELEGATECALL] PASSED [ 76/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_contract_storage_to_pointer_with_storage[fork_Prague-state_test-call_type_CALLCODE] PASSED [ 77/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_reentry[fork_Prague-state_test] PASSED [ 78/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_eoa_init_as_pointer[fork_Prague-state_test] PASSED [ 79/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_pointer_to_created_from_create_after_oog_call_again[fork_Prague-state_test-call_return_RETURN] PASSED [ 80/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_pointer_to_created_from_create_after_oog_call_again[fork_Prague-state_test-call_return_REVERT] PASSED [ 81/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_pointer_to_created_from_create_after_oog_call_again[fork_Prague-state_test-call_return_OOG] PASSED [ 82/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_reverts[fork_Prague-state_test-call_order_CallOrder.CONTRACT_POINTER-first_revert_True-second_revert_True-final_revert_False] PASSED [ 83/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_reverts[fork_Prague-state_test-call_order_CallOrder.CONTRACT_POINTER-first_revert_True-second_revert_False-final_revert_False] PASSED [ 84/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_reverts[fork_Prague-state_test-call_order_CallOrder.CONTRACT_POINTER-first_revert_False-second_revert_True-final_revert_False] PASSED [ 85/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_reverts[fork_Prague-state_test-call_order_CallOrder.CONTRACT_POINTER-first_revert_False-second_revert_False-final_revert_False] PASSED [ 86/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_reverts[fork_Prague-state_test-call_order_CallOrder.CONTRACT_POINTER-first_revert_False-second_revert_False-final_revert_True] PASSED [ 87/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_reverts[fork_Prague-state_test-call_order_CallOrder.POINTER_CONTRACT-first_revert_True-second_revert_True-final_revert_False] PASSED [ 88/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_reverts[fork_Prague-state_test-call_order_CallOrder.POINTER_CONTRACT-first_revert_True-second_revert_False-final_revert_False] PASSED [ 89/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_reverts[fork_Prague-state_test-call_order_CallOrder.POINTER_CONTRACT-first_revert_False-second_revert_True-final_revert_False] PASSED [ 90/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_reverts[fork_Prague-state_test-call_order_CallOrder.POINTER_CONTRACT-first_revert_False-second_revert_False-final_revert_False] PASSED [ 91/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_reverts[fork_Prague-state_test-call_order_CallOrder.POINTER_CONTRACT-first_revert_False-second_revert_False-final_revert_True] PASSED [ 92/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_double_auth[fork_Prague-state_test-second_delegation_DelegationTo.CONTRACT_A-first_delegation_DelegationTo.CONTRACT_A] PASSED [ 93/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_double_auth[fork_Prague-state_test-second_delegation_DelegationTo.CONTRACT_A-first_delegation_DelegationTo.CONTRACT_B] PASSED [ 94/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_double_auth[fork_Prague-state_test-second_delegation_DelegationTo.CONTRACT_A-first_delegation_DelegationTo.RESET] PASSED [ 95/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_double_auth[fork_Prague-state_test-second_delegation_DelegationTo.CONTRACT_B-first_delegation_DelegationTo.CONTRACT_A] PASSED [ 96/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_double_auth[fork_Prague-state_test-second_delegation_DelegationTo.CONTRACT_B-first_delegation_DelegationTo.CONTRACT_B] PASSED [ 97/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_double_auth[fork_Prague-state_test-second_delegation_DelegationTo.CONTRACT_B-first_delegation_DelegationTo.RESET] PASSED [ 98/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_double_auth[fork_Prague-state_test-second_delegation_DelegationTo.RESET-first_delegation_DelegationTo.CONTRACT_A] PASSED [ 99/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_double_auth[fork_Prague-state_test-second_delegation_DelegationTo.RESET-first_delegation_DelegationTo.CONTRACT_B] PASSED [100/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_double_auth[fork_Prague-state_test-second_delegation_DelegationTo.RESET-first_delegation_DelegationTo.RESET] PASSED [101/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_resets_an_empty_code_account_with_storage[fork_Prague-blockchain_test] PASSED [102/103]
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_delegation_replacement_call_previous_contract[fork_Prague-state_test] PASSED [103/103]
+
+=================================== FAILURES ===================================
+_ test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000b-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:389: in test_call_to_precompile_in_pointer_context
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x187d2faa1d64ddcbd6b16e1be3e5c9df4175a044 is 0x00000000000000000000000000000000000000000000000000000000000009c4,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\xc4' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 121292
+Deploying contract with gas limit: 151568
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000068648600000000
+_ test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000c-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:389: in test_call_to_precompile_in_pointer_context
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0xe606cb8810ea0bd7a172c045c04886fbc0cf29d1 is 0x00000000000000000000000000000000000000000000000000000000000009c4,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\xc4' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 121292
+Deploying contract with gas limit: 151568
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000068648600000000
+_ test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000d-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:389: in test_call_to_precompile_in_pointer_context
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0xb1ffdb865d8072358d7f5628950373f6a787e80c is 0x00000000000000000000000000000000000000000000000000000000000009c4,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\xc4' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 121292
+Deploying contract with gas limit: 151568
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000068648600000000
+_ test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000e-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:389: in test_call_to_precompile_in_pointer_context
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x82bf1495fab318993c31029dbe4a6458a0d63072 is 0x00000000000000000000000000000000000000000000000000000000000009c4,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\xc4' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 121292
+Deploying contract with gas limit: 151568
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000068648600000000
+_ test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000f-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:389: in test_call_to_precompile_in_pointer_context
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x80150734665e23d3d3a57b13b2c164735773a185 is 0x00000000000000000000000000000000000000000000000000000000000009c4,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\xc4' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 121292
+Deploying contract with gas limit: 151568
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000068648600000000
+_ test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000010-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:389: in test_call_to_precompile_in_pointer_context
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x36a8299e71561238b28697bbcc1ad8bd64041068 is 0x00000000000000000000000000000000000000000000000000000000000009c4,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\xc4' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 121292
+Deploying contract with gas limit: 151568
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000068648600000000
+_ test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000011-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:389: in test_call_to_precompile_in_pointer_context
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x348aa8c9ff335249edc2a5b8ec30f7106864d19d is 0x00000000000000000000000000000000000000000000000000000000000009c4,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\xc4' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 121292
+Deploying contract with gas limit: 151568
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000068648600000000
+_ test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000b-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:463: in test_pointer_to_precompile
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x7cd4dcfe93d879a2046aa51bec3d71ff8f7d734c is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 115652
+Deploying contract with gas limit: 123860
+Deploying contract with gas limit: 143360
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000074358500000000
+_ test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000c-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:463: in test_pointer_to_precompile
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x852a3737101f85f14a63a4710d5bef643a2a9747 is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 115652
+Deploying contract with gas limit: 123860
+Deploying contract with gas limit: 143360
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000074358500000000
+_ test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000d-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:463: in test_pointer_to_precompile
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x1ce32c27d7f075c15a993c06746c36f94c7e6612 is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 115652
+Deploying contract with gas limit: 123860
+Deploying contract with gas limit: 143360
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000074358500000000
+_ test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000e-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:463: in test_pointer_to_precompile
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x20fdf791bf65ba48e8786b4a52f990f2a5d44408 is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 115652
+Deploying contract with gas limit: 123860
+Deploying contract with gas limit: 143360
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000074358500000000
+_ test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000f-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:463: in test_pointer_to_precompile
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x95d634affbb21d08ba1a123947e2df01ddabf11b is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 115652
+Deploying contract with gas limit: 123860
+Deploying contract with gas limit: 143360
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000074358500000000
+_ test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000010-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:463: in test_pointer_to_precompile
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0xfbbc373733e6ec521cdd24b9b459193604637fb9 is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 115652
+Deploying contract with gas limit: 123860
+Deploying contract with gas limit: 143360
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000074358500000000
+_ test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000011-state_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py:463: in test_pointer_to_precompile
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x7de9ff5a5b7e1f2773934d09e3adf6437f3d6dea is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 115652
+Deploying contract with gas limit: 123860
+Deploying contract with gas limit: 143360
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000074358500000000
+=========================== short test summary info ============================
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000b-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000c-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000d-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000e-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x000000000000000000000000000000000000000f-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000010-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_call_to_precompile_in_pointer_context[fork_Prague-precompile_0x0000000000000000000000000000000000000011-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000b-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000c-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000d-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000e-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000f-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000010-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000011-state_test]
+================== 14 failed, 89 passed in 213.08s (0:03:33) ===================

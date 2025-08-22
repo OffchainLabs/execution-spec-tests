@@ -1,0 +1,517 @@
+Executing: pytest -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 
+--rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/frontier/opcodes/test_dup.py --verbose
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0 -- /home/kolby/ドキュメント/GitHub/execution-spec-tests/.venv/bin/python3
+[1mGenerating fixtures for: Prague[39;49m
+[1m[93mOnly generating fixtures with stable/deployed forks: Specify an upcoming fork via --until=fork to add forks under development.[39;49m
+[1mStart seed for EOA: 0x76620ed6b07d4cb3c0ee75dc41e37e9b572892cb6ad5f1730cbb3021ee2ae26 [39;49m
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.13', 'Platform': 'Linux-6.14.0-28-generic-x86_64-with-glibc2.41', 'Packages': {'pytest': '8.4.1', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'custom-report': '1.0.1', 'regex': '0.2.0', 'xdist': '3.8.0', 'metadata': '3.1.1', 'cov': '4.1.0', 'html': '4.1.1'}, 'Command-line args': '<code>fill -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/frontier/opcodes/test_dup.py --verbose</code>', 'Senders': {}}
+rootdir: /home/kolby/ドキュメント/GitHub/execution-spec-tests
+configfile: src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini
+plugins: json-report-1.5.0, custom-report-1.0.1, regex-0.2.0, xdist-3.8.0, metadata-3.1.1, cov-4.1.0, html-4.1.1
+collecting ...  pytest-regex selected 16 tests to run for regex: .*
+collected 16 items
+
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP1] FAILED [ 1/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP2] FAILED [ 2/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP3] FAILED [ 3/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP4] FAILED [ 4/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP5] FAILED [ 5/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP6] FAILED [ 6/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP7] FAILED [ 7/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP8] FAILED [ 8/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP9] FAILED [ 9/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP10] FAILED [10/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP11] FAILED [11/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP12] FAILED [12/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP13] FAILED [13/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP14] FAILED [14/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP15] FAILED [15/16]
+tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP16] FAILED [16/16]
+
+=================================== FAILURES ===================================
+__________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP1] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xA5906D7f520772C760B9b6EaB77E7902244c957e, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xA5906D7f520772C760B9b6EaB77E7902244c957e, maxFeePerGas: 10 baseFee: 100000000)
+---------------------------- Captured stdout setup -----------------------------
+Starting EOA index: 0x76620ed6b07d4cb3c0ee75dc41e37e9b572892cb6ad5f1730cbb3021ee2ae26
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+__________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP2] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x438BF9F0ea4c978E727778bC90BF69B3daa9e30d, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x438BF9F0ea4c978E727778bC90BF69B3daa9e30d, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+__________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP3] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x08C83da9DaBDB4fA8e791D9271E09D15E77b567E, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x08C83da9DaBDB4fA8e791D9271E09D15E77b567E, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+__________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP4] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xb8cd0A5F651ACE1d3A0fdA0a3507dF5473ffeEe1, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xb8cd0A5F651ACE1d3A0fdA0a3507dF5473ffeEe1, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+__________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP5] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x237143927d0Ed5FeEdBe08DEEB77d62feD75151b, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x237143927d0Ed5FeEdBe08DEEB77d62feD75151b, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+__________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP6] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x2CF5A13e836daCFFe2B17b7Fc30A7d4a7D043a51, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x2CF5A13e836daCFFe2B17b7Fc30A7d4a7D043a51, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+__________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP7] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x6072b80B610B2DE3a3778F789844dFC0f2ec617a, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x6072b80B610B2DE3a3778F789844dFC0f2ec617a, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+__________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP8] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x7b6C5c433232DAC71a2AedCe89f3C4682f578709, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x7b6C5c433232DAC71a2AedCe89f3C4682f578709, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+__________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP9] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xa562AcCD0E3Bcb470a80558F015E73B1B939cDdE, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xa562AcCD0E3Bcb470a80558F015E73B1B939cDdE, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+_________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP10] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x76EDcF8EbB3E244872d23Ec6Fc70564FB390348A, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x76EDcF8EbB3E244872d23Ec6Fc70564FB390348A, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+_________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP11] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x6406ab1d3364DF6e22319BCf9Af10d9F6FfF635D, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x6406ab1d3364DF6e22319BCf9Af10d9F6FfF635D, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+_________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP12] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x5c7965D44842f526f826EB1E088362f338460113, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x5c7965D44842f526f826EB1E088362f338460113, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+_________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP13] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xdfE6E10F8A68aB3F953198e43a2Ffc415E3C64Dd, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xdfE6E10F8A68aB3F953198e43a2Ffc415E3C64Dd, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+_________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP14] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x6CF9A4dF458f21D24b9A09F5ab3dB8f525334648, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x6CF9A4dF458f21D24b9A09F5ab3dB8f525334648, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+_________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP15] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x7ecb9cCFb414F02EfA8c38e6BDCB6427a2364b21, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x7ecb9cCFb414F02EfA8c38e6BDCB6427a2364b21, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+_________ test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP16] __________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x97d67eB03E8D7736142AB80A597f1B14E3Da7190, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_dup.py:104: in test_dup
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x97d67eB03E8D7736142AB80A597f1B14E3Da7190, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 143432
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000030274800000000
+=========================== short test summary info ============================
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP1]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP2]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP3]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP4]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP5]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP6]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP7]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP8]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP9]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP10]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP11]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP12]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP13]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP14]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP15]
+FAILED tests/frontier/opcodes/test_dup.py::test_dup[fork_Prague-evm_code_type_LEGACY-state_test-DUP16]
+============================= 16 failed in 12.09s ==============================

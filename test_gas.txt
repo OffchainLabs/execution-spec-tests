@@ -1,0 +1,324 @@
+Executing: pytest -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 
+--rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/prague/eip7702_set_code_tx/test_gas.py --verbose
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0 -- /home/kolby/ドキュメント/GitHub/execution-spec-tests/.venv/bin/python3
+[1mGenerating fixtures for: Prague[39;49m
+[1m[93mOnly generating fixtures with stable/deployed forks: Specify an upcoming fork via --until=fork to add forks under development.[39;49m
+[1mStart seed for EOA: 0xf6e9e51a93ff2f0f66974ef8b6e625e0eceb2dee4c2f05dbc20b7cb94c5b8f28 [39;49m
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.13', 'Platform': 'Linux-6.14.0-28-generic-x86_64-with-glibc2.41', 'Packages': {'pytest': '8.4.1', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'custom-report': '1.0.1', 'regex': '0.2.0', 'xdist': '3.8.0', 'metadata': '3.1.1', 'cov': '4.1.0', 'html': '4.1.1'}, 'Command-line args': '<code>fill -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/prague/eip7702_set_code_tx/test_gas.py --verbose</code>', 'Senders': {}}
+rootdir: /home/kolby/ドキュメント/GitHub/execution-spec-tests
+configfile: src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini
+plugins: json-report-1.5.0, custom-report-1.0.1, regex-0.2.0, xdist-3.8.0, metadata-3.1.1, cov-4.1.0, html-4.1.1
+collecting ...  pytest-regex selected 165 tests to run for regex: .*
+collected 165 items
+
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_authorization_single_signer] PASSED [  1/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_chain_specific_authorization_single_signer] PASSED [  2/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-multiple_valid_authorizations_single_signer] PASSED [  3/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_invalid_nonce_authorization_single_signer] PASSED [  4/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_invalid_authorization_invalid_chain_id_single_signer] PASSED [  5/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_invalid_authorization_eoa_authority_multiple_signers_1] PASSED [  6/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_invalid_authorization_eoa_authority_multiple_signers_2] PASSED [  7/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-multiple_invalid_nonce_authorizations_single_signer] PASSED [  8/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-multiple_invalid_nonce_authorizations_multiple_signers] PASSED [  9/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-multiple_invalid_nonce_authorizations_self_sponsored_multiple_signers] PASSED [ 10/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-multiple_invalid_chain_id_authorizations_single_signer] PASSED [ 11/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-multiple_valid_authorizations_multiple_signers] PASSED [ 12/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-first_valid_then_single_repeated_nonce_authorization] PASSED [ 13/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-first_valid_then_single_repeated_nonce_authorizations_multiple_signers] PASSED [ 14/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_authorization_to_eoa] PASSED [ 15/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_authorization_to_contract] PASSED [ 16/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_authorization_with_authority_in_access_list] PASSED [ 17/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_authorization_with_set_code_address_in_access_list] PASSED [ 18/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_authorization_with_authority_and_set_code_address_in_access_list] PASSED [ 19/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_authorization_eoa_authority] PASSED [ 20/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_re_authorization_eoa_authority] PASSED [ 21/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-multiple_valid_authorizations_eoa_authority] PASSED [ 22/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_authorization_eoa_self_sponsored_authority] PASSED [ 23/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-multiple_valid_authorizations_eoa_self_sponsored_authority] PASSED [ 24/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_authorization_invalid_contract_authority] PASSED [ 25/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-multiple_authorizations_empty_account_then_contract_authority] PASSED [ 26/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-multiple_authorizations_eoa_then_contract_authority] PASSED [ 27/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-multiple_authorizations_eoa_self_sponsored_then_contract_authority] PASSED [ 28/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_authorization_with_single_non_zero_byte_data] PASSED [ 29/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-single_valid_authorization_with_single_zero_byte_data] PASSED [ 30/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-many_valid_authorizations_single_signer] PASSED [ 31/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-many_valid_authorizations_multiple_signers] PASSED [ 32/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_gas_cost[fork_Prague-state_test-first_valid_then_many_duplicate_authorizations] PASSED [ 33/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_single_signer-check_delegated_account_first_True] PASSED [ 34/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_single_signer-check_delegated_account_first_False] PASSED [ 35/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_chain_specific_authorization_single_signer-check_delegated_account_first_True] FAILED [ 36/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_chain_specific_authorization_single_signer-check_delegated_account_first_False] FAILED [ 37/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_valid_authorizations_single_signer-check_delegated_account_first_True] PASSED [ 38/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_valid_authorizations_single_signer-check_delegated_account_first_False] PASSED [ 39/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_invalid_nonce_authorization_single_signer-check_delegated_account_first_True] PASSED [ 40/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_invalid_nonce_authorization_single_signer-check_delegated_account_first_False] PASSED [ 41/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_invalid_authorization_invalid_chain_id_single_signer-check_delegated_account_first_True] PASSED [ 42/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_invalid_authorization_invalid_chain_id_single_signer-check_delegated_account_first_False] PASSED [ 43/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_invalid_authorization_eoa_authority_multiple_signers_1-check_delegated_account_first_True] PASSED [ 44/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_invalid_authorization_eoa_authority_multiple_signers_1-check_delegated_account_first_False] PASSED [ 45/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_invalid_authorization_eoa_authority_multiple_signers_2-check_delegated_account_first_True] PASSED [ 46/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_invalid_authorization_eoa_authority_multiple_signers_2-check_delegated_account_first_False] PASSED [ 47/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_invalid_nonce_authorizations_single_signer-check_delegated_account_first_True] PASSED [ 48/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_invalid_nonce_authorizations_single_signer-check_delegated_account_first_False] PASSED [ 49/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_invalid_nonce_authorizations_multiple_signers-check_delegated_account_first_True] PASSED [ 50/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_invalid_nonce_authorizations_multiple_signers-check_delegated_account_first_False] PASSED [ 51/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_invalid_nonce_authorizations_self_sponsored_multiple_signers-check_delegated_account_first_True] PASSED [ 52/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_invalid_nonce_authorizations_self_sponsored_multiple_signers-check_delegated_account_first_False] PASSED [ 53/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_invalid_chain_id_authorizations_single_signer-check_delegated_account_first_True] PASSED [ 54/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_invalid_chain_id_authorizations_single_signer-check_delegated_account_first_False] PASSED [ 55/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_valid_authorizations_multiple_signers-check_delegated_account_first_True] PASSED [ 56/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_valid_authorizations_multiple_signers-check_delegated_account_first_False] PASSED [ 57/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-first_valid_then_single_repeated_nonce_authorization-check_delegated_account_first_True] PASSED [ 58/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-first_valid_then_single_repeated_nonce_authorization-check_delegated_account_first_False] PASSED [ 59/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-first_valid_then_single_repeated_nonce_authorizations_multiple_signers-check_delegated_account_first_True] PASSED [ 60/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-first_valid_then_single_repeated_nonce_authorizations_multiple_signers-check_delegated_account_first_False] PASSED [ 61/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_to_eoa-check_delegated_account_first_True] PASSED [ 62/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_to_eoa-check_delegated_account_first_False] PASSED [ 63/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_to_contract-check_delegated_account_first_True] PASSED [ 64/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_to_contract-check_delegated_account_first_False] PASSED [ 65/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_with_authority_in_access_list-check_delegated_account_first_True] PASSED [ 66/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_with_authority_in_access_list-check_delegated_account_first_False] PASSED [ 67/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_with_set_code_address_in_access_list-check_delegated_account_first_True] PASSED [ 68/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_with_set_code_address_in_access_list-check_delegated_account_first_False] PASSED [ 69/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_with_authority_and_set_code_address_in_access_list-check_delegated_account_first_True] PASSED [ 70/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_with_authority_and_set_code_address_in_access_list-check_delegated_account_first_False] PASSED [ 71/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_eoa_authority-check_delegated_account_first_True] PASSED [ 72/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_eoa_authority-check_delegated_account_first_False] PASSED [ 73/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_re_authorization_eoa_authority-check_delegated_account_first_True] PASSED [ 74/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_re_authorization_eoa_authority-check_delegated_account_first_False] PASSED [ 75/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_valid_authorizations_eoa_authority-check_delegated_account_first_True] PASSED [ 76/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_valid_authorizations_eoa_authority-check_delegated_account_first_False] PASSED [ 77/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_eoa_self_sponsored_authority-check_delegated_account_first_True] PASSED [ 78/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_eoa_self_sponsored_authority-check_delegated_account_first_False] PASSED [ 79/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_valid_authorizations_eoa_self_sponsored_authority-check_delegated_account_first_True] PASSED [ 80/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_valid_authorizations_eoa_self_sponsored_authority-check_delegated_account_first_False] PASSED [ 81/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_invalid_contract_authority-check_delegated_account_first_True] FAILED [ 82/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_invalid_contract_authority-check_delegated_account_first_False] FAILED [ 83/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_authorizations_empty_account_then_contract_authority-check_delegated_account_first_True] FAILED [ 84/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_authorizations_empty_account_then_contract_authority-check_delegated_account_first_False] FAILED [ 85/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_authorizations_eoa_then_contract_authority-check_delegated_account_first_True] FAILED [ 86/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_authorizations_eoa_then_contract_authority-check_delegated_account_first_False] FAILED [ 87/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_authorizations_eoa_self_sponsored_then_contract_authority-check_delegated_account_first_True] FAILED [ 88/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_authorizations_eoa_self_sponsored_then_contract_authority-check_delegated_account_first_False] FAILED [ 89/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-pre_authorized_eoa_authority_no_re_authorization-check_delegated_account_first_True] PASSED [ 90/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-pre_authorized_eoa_authority_no_re_authorization-check_delegated_account_first_False] PASSED [ 91/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-pre_authorized_eoa_authority_no_re_authorization_self_sponsored-check_delegated_account_first_True] PASSED [ 92/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-pre_authorized_eoa_authority_no_re_authorization_self_sponsored-check_delegated_account_first_False] PASSED [ 93/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_authorization_single_signer] PASSED [ 94/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_chain_specific_authorization_single_signer] PASSED [ 95/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-multiple_valid_authorizations_single_signer] PASSED [ 96/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_invalid_nonce_authorization_single_signer] PASSED [ 97/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_invalid_authorization_invalid_chain_id_single_signer] PASSED [ 98/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_invalid_authorization_eoa_authority_multiple_signers_1] PASSED [ 99/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_invalid_authorization_eoa_authority_multiple_signers_2] PASSED [100/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-multiple_invalid_nonce_authorizations_single_signer] PASSED [101/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-multiple_invalid_nonce_authorizations_multiple_signers] PASSED [102/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-multiple_invalid_nonce_authorizations_self_sponsored_multiple_signers] PASSED [103/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-multiple_invalid_chain_id_authorizations_single_signer] PASSED [104/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-multiple_valid_authorizations_multiple_signers] PASSED [105/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-first_valid_then_single_repeated_nonce_authorization] PASSED [106/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-first_valid_then_single_repeated_nonce_authorizations_multiple_signers] PASSED [107/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_authorization_to_eoa] PASSED [108/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_authorization_to_contract] PASSED [109/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_authorization_with_authority_in_access_list] PASSED [110/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_authorization_with_set_code_address_in_access_list] PASSED [111/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_authorization_with_authority_and_set_code_address_in_access_list] PASSED [112/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_authorization_eoa_authority] PASSED [113/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_re_authorization_eoa_authority] PASSED [114/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-multiple_valid_authorizations_eoa_authority] PASSED [115/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_authorization_eoa_self_sponsored_authority] PASSED [116/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-multiple_valid_authorizations_eoa_self_sponsored_authority] PASSED [117/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_authorization_invalid_contract_authority] PASSED [118/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-multiple_authorizations_empty_account_then_contract_authority] PASSED [119/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-multiple_authorizations_eoa_then_contract_authority] PASSED [120/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-multiple_authorizations_eoa_self_sponsored_then_contract_authority] PASSED [121/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_authorization_with_single_non_zero_byte_data] PASSED [122/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-single_valid_authorization_with_single_zero_byte_data] PASSED [123/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-many_valid_authorizations_single_signer] PASSED [124/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-many_valid_authorizations_multiple_signers] PASSED [125/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_True-first_valid_then_many_duplicate_authorizations] PASSED [126/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_authorization_single_signer] PASSED [127/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_chain_specific_authorization_single_signer] PASSED [128/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-multiple_valid_authorizations_single_signer] PASSED [129/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_invalid_nonce_authorization_single_signer] PASSED [130/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_invalid_authorization_invalid_chain_id_single_signer] PASSED [131/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_invalid_authorization_eoa_authority_multiple_signers_1] PASSED [132/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_invalid_authorization_eoa_authority_multiple_signers_2] PASSED [133/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-multiple_invalid_nonce_authorizations_single_signer] PASSED [134/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-multiple_invalid_nonce_authorizations_multiple_signers] PASSED [135/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-multiple_invalid_nonce_authorizations_self_sponsored_multiple_signers] PASSED [136/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-multiple_invalid_chain_id_authorizations_single_signer] PASSED [137/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-multiple_valid_authorizations_multiple_signers] PASSED [138/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-first_valid_then_single_repeated_nonce_authorization] PASSED [139/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-first_valid_then_single_repeated_nonce_authorizations_multiple_signers] PASSED [140/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_authorization_to_eoa] PASSED [141/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_authorization_to_contract] PASSED [142/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_authorization_with_authority_in_access_list] PASSED [143/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_authorization_with_set_code_address_in_access_list] PASSED [144/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_authorization_with_authority_and_set_code_address_in_access_list] PASSED [145/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_authorization_eoa_authority] PASSED [146/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_re_authorization_eoa_authority] PASSED [147/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-multiple_valid_authorizations_eoa_authority] PASSED [148/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_authorization_eoa_self_sponsored_authority] PASSED [149/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-multiple_valid_authorizations_eoa_self_sponsored_authority] PASSED [150/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_authorization_invalid_contract_authority] PASSED [151/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-multiple_authorizations_empty_account_then_contract_authority] PASSED [152/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-multiple_authorizations_eoa_then_contract_authority] PASSED [153/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-multiple_authorizations_eoa_self_sponsored_then_contract_authority] PASSED [154/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_authorization_with_single_non_zero_byte_data] PASSED [155/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-single_valid_authorization_with_single_zero_byte_data] PASSED [156/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-many_valid_authorizations_single_signer] PASSED [157/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-many_valid_authorizations_multiple_signers] PASSED [158/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_intrinsic_gas_cost[fork_Prague-state_test-valid_False-first_valid_then_many_duplicate_authorizations] PASSED [159/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_self_set_code_cost[fork_Prague-state_test-pre_authorized_True] PASSED [160/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_self_set_code_cost[fork_Prague-state_test-pre_authorized_False] PASSED [161/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_call_to_pre_authorized_oog[fork_Prague-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [162/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_call_to_pre_authorized_oog[fork_Prague-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [163/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_call_to_pre_authorized_oog[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [164/165]
+tests/prague/eip7702_set_code_tx/test_gas.py::test_call_to_pre_authorized_oog[fork_Prague-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [165/165]
+
+=================================== FAILURES ===================================
+_ test_account_warming[fork_Prague-state_test-single_valid_chain_specific_authorization_single_signer-check_delegated_account_first_True] _
+tests/prague/eip7702_set_code_tx/test_gas.py:977: in test_account_warming
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x4a91e726476da257fd0617e4cc4f41631e8c12df of 0xf65477277fa1c5c01abba7a1785dc78323d46885 is 0x0000000000000000000000000000000000000000000000000000000000000a28,expected 0xc8.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\n(' == 200
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 255618
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000041915800000000
+_ test_account_warming[fork_Prague-state_test-single_valid_chain_specific_authorization_single_signer-check_delegated_account_first_False] _
+tests/prague/eip7702_set_code_tx/test_gas.py:977: in test_account_warming
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x8c0350733999e177dca9521a87bb9844ba5f0909 of 0x5b044c4ce17153994ed3e89b7771716803700f9b is 0x0000000000000000000000000000000000000000000000000000000000000a28,expected 0x0a8c.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\n(' == 2700
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 255618
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000041915800000000
+_ test_account_warming[fork_Prague-state_test-single_valid_authorization_invalid_contract_authority-check_delegated_account_first_True] _
+tests/prague/eip7702_set_code_tx/test_gas.py:977: in test_account_warming
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0xba5a8f1ec0d0e839d82cdb4820c83c0f63b4cd69 of 0x1a4036ae4786f37ba46b8fec089a7bdd109e29a1 is 0x00000000000000000000000000000000000000000000000000000000000000c8,expected 0x64.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8' == 100
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 255618
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000063597900000000
+_ test_account_warming[fork_Prague-state_test-single_valid_authorization_invalid_contract_authority-check_delegated_account_first_False] _
+tests/prague/eip7702_set_code_tx/test_gas.py:977: in test_account_warming
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0xc7cbbd93a8b1e5a21ba5db5e5e09976aacf30f47 of 0x0f6906323aed93c2d04842611983d1e0e8360f21 is 0x0000000000000000000000000000000000000000000000000000000000000a8c,expected 0x64.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\n\x8c' == 100
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 255618
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000063597900000000
+_ test_account_warming[fork_Prague-state_test-multiple_authorizations_empty_account_then_contract_authority-check_delegated_account_first_True] _
+tests/prague/eip7702_set_code_tx/test_gas.py:977: in test_account_warming
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x62345397dfe9c0246148fb0891775c47c6368b91 of 0xa28bbfe8a593c6ce03ac5f576c58dd23f564f91b is 0x00000000000000000000000000000000000000000000000000000000000000c8,expected 0x64.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8' == 100
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 330068
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000070224600000000
+_ test_account_warming[fork_Prague-state_test-multiple_authorizations_empty_account_then_contract_authority-check_delegated_account_first_False] _
+tests/prague/eip7702_set_code_tx/test_gas.py:977: in test_account_warming
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x2edf5be9acf4423fbe70e55ac6fb73c58ded76af of 0x8d44fe2fe8cd7e8bfe980a6de241149ca8716273 is 0x00000000000000000000000000000000000000000000000000000000000000c8,expected 0x64.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8' == 100
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 330068
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000070224600000000
+_ test_account_warming[fork_Prague-state_test-multiple_authorizations_eoa_then_contract_authority-check_delegated_account_first_True] _
+tests/prague/eip7702_set_code_tx/test_gas.py:977: in test_account_warming
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0xa839202344476678273468080f73a82cb8d2cfea of 0x7d3ca784f25605eb8e58f84ee633b14a7dcef6ce is 0x00000000000000000000000000000000000000000000000000000000000000c8,expected 0x64.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8' == 100
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 330068
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000092791800000000
+_ test_account_warming[fork_Prague-state_test-multiple_authorizations_eoa_then_contract_authority-check_delegated_account_first_False] _
+tests/prague/eip7702_set_code_tx/test_gas.py:977: in test_account_warming
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x40e4221919b2820bf55a8ed71cd6f9c33482e919 of 0x05eef7582626ed26f4ef12e307f9b3b03aac83fd is 0x00000000000000000000000000000000000000000000000000000000000000c8,expected 0x64.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8' == 100
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 330068
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000092791800000000
+_ test_account_warming[fork_Prague-state_test-multiple_authorizations_eoa_self_sponsored_then_contract_authority-check_delegated_account_first_True] _
+tests/prague/eip7702_set_code_tx/test_gas.py:977: in test_account_warming
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x9ed28f0c2ace4c7ce2e05d39d159180b8c56a7c3 of 0xc032f06e89c25a0fed0827e21826c326e057dbac is 0x00000000000000000000000000000000000000000000000000000000000000c8,expected 0x64.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8' == 100
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 330068
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000069691800000000
+_ test_account_warming[fork_Prague-state_test-multiple_authorizations_eoa_self_sponsored_then_contract_authority-check_delegated_account_first_False] _
+tests/prague/eip7702_set_code_tx/test_gas.py:977: in test_account_warming
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0xf40c276f72305872ab98fd2f2c3ea3d3fd27453d of 0x2121f38bc31d44a780344a1bf2c0afb438535adc is 0x00000000000000000000000000000000000000000000000000000000000000c8,expected 0x64.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8' == 100
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 329996
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000069688200000000
+=========================== short test summary info ============================
+FAILED tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_chain_specific_authorization_single_signer-check_delegated_account_first_True]
+FAILED tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_chain_specific_authorization_single_signer-check_delegated_account_first_False]
+FAILED tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_invalid_contract_authority-check_delegated_account_first_True]
+FAILED tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-single_valid_authorization_invalid_contract_authority-check_delegated_account_first_False]
+FAILED tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_authorizations_empty_account_then_contract_authority-check_delegated_account_first_True]
+FAILED tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_authorizations_empty_account_then_contract_authority-check_delegated_account_first_False]
+FAILED tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_authorizations_eoa_then_contract_authority-check_delegated_account_first_True]
+FAILED tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_authorizations_eoa_then_contract_authority-check_delegated_account_first_False]
+FAILED tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_authorizations_eoa_self_sponsored_then_contract_authority-check_delegated_account_first_True]
+FAILED tests/prague/eip7702_set_code_tx/test_gas.py::test_account_warming[fork_Prague-state_test-multiple_authorizations_eoa_self_sponsored_then_contract_authority-check_delegated_account_first_False]
+================== 10 failed, 155 passed in 189.58s (0:03:09) ==================

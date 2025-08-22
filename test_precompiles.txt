@@ -1,0 +1,138 @@
+Executing: pytest -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 
+--rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/frontier/precompiles/test_precompiles.py --verbose
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0 -- /home/kolby/ドキュメント/GitHub/execution-spec-tests/.venv/bin/python3
+[1mGenerating fixtures for: Prague[39;49m
+[1m[93mOnly generating fixtures with stable/deployed forks: Specify an upcoming fork via --until=fork to add forks under development.[39;49m
+[1mStart seed for EOA: 0x132b70fad1b681acb3583808561d9477c6a679a624b2b2c7351d6eb617e05c3d [39;49m
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.13', 'Platform': 'Linux-6.14.0-28-generic-x86_64-with-glibc2.41', 'Packages': {'pytest': '8.4.1', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'custom-report': '1.0.1', 'regex': '0.2.0', 'xdist': '3.8.0', 'metadata': '3.1.1', 'cov': '4.1.0', 'html': '4.1.1'}, 'Command-line args': '<code>fill -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/frontier/precompiles/test_precompiles.py --verbose</code>', 'Senders': {}}
+rootdir: /home/kolby/ドキュメント/GitHub/execution-spec-tests
+configfile: src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini
+plugins: json-report-1.5.0, custom-report-1.0.1, regex-0.2.0, xdist-3.8.0, metadata-3.1.1, cov-4.1.0, html-4.1.1
+collecting ...  pytest-regex selected 19 tests to run for regex: .*
+collected 19 items
+
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000b-precompile_exists_True-state_test] FAILED [ 1/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000c-precompile_exists_True-state_test] FAILED [ 2/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000d-precompile_exists_True-state_test] FAILED [ 3/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000e-precompile_exists_True-state_test] FAILED [ 4/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000f-precompile_exists_True-state_test] FAILED [ 5/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000010-precompile_exists_True-state_test] FAILED [ 6/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000011-precompile_exists_True-state_test] FAILED [ 7/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000012-precompile_exists_False-state_test] PASSED [ 8/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000a-precompile_exists_True-state_test] PASSED [ 9/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000009-precompile_exists_True-state_test] PASSED [10/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000005-precompile_exists_True-state_test] PASSED [11/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000006-precompile_exists_True-state_test] PASSED [12/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000007-precompile_exists_True-state_test] PASSED [13/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000008-precompile_exists_True-state_test] PASSED [14/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000001-precompile_exists_True-state_test] PASSED [15/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000000-precompile_exists_False-state_test] PASSED [16/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000002-precompile_exists_True-state_test] PASSED [17/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000003-precompile_exists_True-state_test] PASSED [18/19]
+tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000004-precompile_exists_True-state_test] PASSED [19/19]
+
+=================================== FAILURES ===================================
+_ test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000b-precompile_exists_True-state_test] _
+tests/frontier/precompiles/test_precompiles.py:133: in test_precompiles
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x262cb32dd0d6c856944c9eed1bd721246dccb108 is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+---------------------------- Captured stdout setup -----------------------------
+Starting EOA index: 0x132b70fad1b681acb3583808561d9477c6a679a624b2b2c7351d6eb617e05c3d
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 201254
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000036270000000000
+_ test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000c-precompile_exists_True-state_test] _
+tests/frontier/precompiles/test_precompiles.py:133: in test_precompiles
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x1aafbc6cf146523685ded0d6c7dd7ce66b31825a is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 201206
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000036267600000000
+_ test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000d-precompile_exists_True-state_test] _
+tests/frontier/precompiles/test_precompiles.py:133: in test_precompiles
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x9ece0256e43f933dda3b4c59ee5c813a143bc32e is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 201254
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000036270000000000
+_ test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000e-precompile_exists_True-state_test] _
+tests/frontier/precompiles/test_precompiles.py:133: in test_precompiles
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x479e3cdd78663a1cd7ceefb7fcbe7bf7eead0ea1 is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 201254
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000036270000000000
+_ test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000f-precompile_exists_True-state_test] _
+tests/frontier/precompiles/test_precompiles.py:133: in test_precompiles
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0xf876f8b4f0485634bb77861a5ea797aebf4a9af4 is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 201206
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000036267600000000
+_ test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000010-precompile_exists_True-state_test] _
+tests/frontier/precompiles/test_precompiles.py:133: in test_precompiles
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x1eb61eff879e5aa78bd506a4a934ccffc392f98d is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 201254
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000036270000000000
+_ test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000011-precompile_exists_True-state_test] _
+tests/frontier/precompiles/test_precompiles.py:133: in test_precompiles
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0xec9564fbdec11f69333690cbda51cf29ffa139f2 is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 201254
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000036270000000000
+=========================== short test summary info ============================
+FAILED tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000b-precompile_exists_True-state_test]
+FAILED tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000c-precompile_exists_True-state_test]
+FAILED tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000d-precompile_exists_True-state_test]
+FAILED tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000e-precompile_exists_True-state_test]
+FAILED tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x000000000000000000000000000000000000000f-precompile_exists_True-state_test]
+FAILED tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000010-precompile_exists_True-state_test]
+FAILED tests/frontier/precompiles/test_precompiles.py::test_precompiles[fork_Prague-address_0x0000000000000000000000000000000000000011-precompile_exists_True-state_test]
+======================== 7 failed, 12 passed in 19.10s =========================

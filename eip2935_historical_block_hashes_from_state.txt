@@ -1,0 +1,215 @@
+Executing: pytest -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 
+--rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/prague/eip2935_historical_block_hashes_from_state --verbose
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0 -- /home/kolby/ドキュメント/GitHub/execution-spec-tests/.venv/bin/python3
+[1mGenerating fixtures for: Prague[39;49m
+[1m[93mOnly generating fixtures with stable/deployed forks: Specify an upcoming fork via --until=fork to add forks under development.[39;49m
+[1mStart seed for EOA: 0xccbf119836d0b46e32c2c3da6a5605d9d398f25d1a959eb8fd2733f2d9c1f99f [39;49m
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.13', 'Platform': 'Linux-6.14.0-28-generic-x86_64-with-glibc2.41', 'Packages': {'pytest': '8.4.1', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'custom-report': '1.0.1', 'regex': '0.2.0', 'xdist': '3.8.0', 'metadata': '3.1.1', 'cov': '4.1.0', 'html': '4.1.1'}, 'Command-line args': '<code>fill -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/prague/eip2935_historical_block_hashes_from_state --verbose</code>', 'Senders': {}}
+rootdir: /home/kolby/ドキュメント/GitHub/execution-spec-tests
+configfile: src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini
+plugins: json-report-1.5.0, custom-report-1.0.1, regex-0.2.0, xdist-3.8.0, metadata-3.1.1, cov-4.1.0, html-4.1.1
+collecting ...  pytest-regex selected 25 tests to run for regex: .*
+collected 25 items
+
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_history[fork_Prague-blockchain_test-single_block_check_blockhash_first] FAILED [ 1/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_history[fork_Prague-blockchain_test-single_block_check_contract_first] FAILED [ 2/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_history[fork_Prague-blockchain_test-two_blocks_check_blockhash_first] FAILED [ 3/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_history[fork_Prague-blockchain_test-two_blocks_check_contract_first] FAILED [ 4/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_history[fork_Prague-blockchain_test-full_history_plus_one_check_blockhash_first] FAILED [ 5/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_call_opcodes[fork_Prague-call_opcode_STATICCALL-evm_code_type_LEGACY-blockchain_test] PASSED [ 6/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_call_opcodes[fork_Prague-call_opcode_DELEGATECALL-evm_code_type_LEGACY-blockchain_test] PASSED [ 7/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_call_opcodes[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-blockchain_test] PASSED [ 8/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_call_opcodes[fork_Prague-call_opcode_CALLCODE-evm_code_type_LEGACY-blockchain_test] PASSED [ 9/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_invalid_history_contract_calls[fork_Prague-blockchain_test-current_block] FAILED [10/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_invalid_history_contract_calls[fork_Prague-blockchain_test-future_block] FAILED [11/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_invalid_history_contract_calls[fork_Prague-blockchain_test-2**64-1] PASSED [12/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_invalid_history_contract_calls[fork_Prague-blockchain_test-2**64] PASSED [13/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_invalid_history_contract_calls_input_size[fork_Prague-blockchain_test-zero_size] PASSED [14/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_invalid_history_contract_calls_input_size[fork_Prague-blockchain_test-too_large] PASSED [15/16]
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_invalid_history_contract_calls_input_size[fork_Prague-blockchain_test-too_small] PASSED [16/16]
+
+=================================== FAILURES ===================================
+_ test_block_hashes_history[fork_Prague-blockchain_test-single_block_check_blockhash_first] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=insufficient funds for gas * price + value: address222 0x28e1a22C6c4fD8B133C876110E98cEfEF55AA4A2 have 10000000000 want 10000000000000000)
+
+The above exception was the direct cause of the following exception:
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py:312: in test_block_hashes_history
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=insufficient funds for gas * price + value: address222 0x28e1a22C6c4fD8B133C876110E98cEfEF55AA4A2 have 10000000000 want 10000000000000000)
+---------------------------- Captured stdout setup -----------------------------
+Starting EOA index: 0xccbf119836d0b46e32c2c3da6a5605d9d398f25d1a959eb8fd2733f2d9c1f99f
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 134618
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000008844200000000
+_ test_block_hashes_history[fork_Prague-blockchain_test-single_block_check_contract_first] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=insufficient funds for gas * price + value: address222 0x59C03d4C3870D4053070DD3f350E369b10B1DE24 have 10000000000 want 10000000000000000)
+
+The above exception was the direct cause of the following exception:
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py:312: in test_block_hashes_history
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=insufficient funds for gas * price + value: address222 0x59C03d4C3870D4053070DD3f350E369b10B1DE24 have 10000000000 want 10000000000000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 134618
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000008844200000000
+_ test_block_hashes_history[fork_Prague-blockchain_test-two_blocks_check_blockhash_first] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=insufficient funds for gas * price + value: address222 0xbE6D36D58A4a096F0D56F0151F430977723cCDcE have 10000000000 want 10000000000000000)
+
+The above exception was the direct cause of the following exception:
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py:312: in test_block_hashes_history
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=insufficient funds for gas * price + value: address222 0xbE6D36D58A4a096F0D56F0151F430977723cCDcE have 10000000000 want 10000000000000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 134690
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000008847800000000
+_ test_block_hashes_history[fork_Prague-blockchain_test-two_blocks_check_contract_first] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=insufficient funds for gas * price + value: address222 0x947c377768e076ceA197D6f08FDd94c1E2B099CD have 10000000000 want 10000000000000000)
+
+The above exception was the direct cause of the following exception:
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py:312: in test_block_hashes_history
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=insufficient funds for gas * price + value: address222 0x947c377768e076ceA197D6f08FDd94c1E2B099CD have 10000000000 want 10000000000000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 134690
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000008847800000000
+_ test_block_hashes_history[fork_Prague-blockchain_test-full_history_plus_one_check_blockhash_first] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=insufficient funds for gas * price + value: address222 0x96f99567f951969126F56E925467C4260eD39981 have 10000000000 want 10000000000000000)
+
+The above exception was the direct cause of the following exception:
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py:312: in test_block_hashes_history
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=insufficient funds for gas * price + value: address222 0x96f99567f951969126F56E925467C4260eD39981 have 10000000000 want 10000000000000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 238700
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000014051800000000
+_ test_invalid_history_contract_calls[fork_Prague-blockchain_test-current_block] _
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py:429: in test_invalid_history_contract_calls
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0xe5529900637c69ac679b5abbf673bc7a7ab79927 is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 264386
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000039878900000000
+_ test_invalid_history_contract_calls[fork_Prague-blockchain_test-future_block] _
+tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py:429: in test_invalid_history_contract_calls
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x6531009ffb98833eaab56b36725b5b10abe2749c is 0x0000000000000000000000000000000000000000000000000000000000000001,expected 0x00.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01' == 0
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 264386
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000039878900000000
+=========================== short test summary info ============================
+FAILED tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_history[fork_Prague-blockchain_test-single_block_check_blockhash_first]
+FAILED tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_history[fork_Prague-blockchain_test-single_block_check_contract_first]
+FAILED tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_history[fork_Prague-blockchain_test-two_blocks_check_blockhash_first]
+FAILED tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_history[fork_Prague-blockchain_test-two_blocks_check_contract_first]
+FAILED tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_block_hashes_history[fork_Prague-blockchain_test-full_history_plus_one_check_blockhash_first]
+FAILED tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_invalid_history_contract_calls[fork_Prague-blockchain_test-current_block]
+FAILED tests/prague/eip2935_historical_block_hashes_from_state/test_block_hashes.py::test_invalid_history_contract_calls[fork_Prague-blockchain_test-future_block]
+========================= 7 failed, 9 passed in 13.61s =========================

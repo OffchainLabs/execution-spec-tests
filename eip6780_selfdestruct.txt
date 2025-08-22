@@ -1,0 +1,481 @@
+Executing: pytest -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 
+--rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/cancun/eip6780_selfdestruct --verbose
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0 -- /home/kolby/ドキュメント/GitHub/execution-spec-tests/.venv/bin/python3
+[1mGenerating fixtures for: Prague[39;49m
+[1m[93mOnly generating fixtures with stable/deployed forks: Specify an upcoming fork via --until=fork to add forks under development.[39;49m
+[1mStart seed for EOA: 0x3d886ead5a230babd644d80af98824ad62d0857a10aa7a4cba2450da9e780741 [39;49m
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.13', 'Platform': 'Linux-6.14.0-28-generic-x86_64-with-glibc2.41', 'Packages': {'pytest': '8.4.1', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'custom-report': '1.0.1', 'regex': '0.2.0', 'xdist': '3.8.0', 'metadata': '3.1.1', 'cov': '4.1.0', 'html': '4.1.1'}, 'Command-line args': '<code>fill -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/cancun/eip6780_selfdestruct --verbose</code>', 'Senders': {}}
+rootdir: /home/kolby/ドキュメント/GitHub/execution-spec-tests
+configfile: src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini
+plugins: json-report-1.5.0, custom-report-1.0.1, regex-0.2.0, xdist-3.8.0, metadata-3.1.1, cov-4.1.0, html-4.1.1
+collecting ...  pytest-regex selected 130 tests to run for regex: .*
+collected 130 items
+
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_True-call_create2_contract_at_the_end_True-create2_dest_already_in_state_True] FAILED [  1/130]
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_True-call_create2_contract_at_the_end_True-create2_dest_already_in_state_False] FAILED [  2/130]
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_True-call_create2_contract_at_the_end_False-create2_dest_already_in_state_True] FAILED [  3/130]
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_True-call_create2_contract_at_the_end_False-create2_dest_already_in_state_False] FAILED [  4/130]
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_False-call_create2_contract_at_the_end_True-create2_dest_already_in_state_True] FAILED [  5/130]
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_False-call_create2_contract_at_the_end_True-create2_dest_already_in_state_False] FAILED [  6/130]
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_two_different_transactions[fork_Prague-blockchain_test-call_create2_contract_at_the_end_True-create2_dest_already_in_state_True] FAILED [  7/130]
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_two_different_transactions[fork_Prague-blockchain_test-call_create2_contract_at_the_end_True-create2_dest_already_in_state_False] FAILED [  8/130]
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_two_different_transactions[fork_Prague-blockchain_test-call_create2_contract_at_the_end_False-create2_dest_already_in_state_True] FAILED [  9/130]
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_two_different_transactions[fork_Prague-blockchain_test-call_create2_contract_at_the_end_False-create2_dest_already_in_state_False] FAILED [ 10/130]
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_multi_tx[fork_Prague-blockchain_test-selfdestruct_on_first_tx_False-recreate_on_first_tx_False] FAILED [ 11/130]
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_multi_tx[fork_Prague-blockchain_test-selfdestruct_on_first_tx_True-recreate_on_first_tx_False] FAILED [ 12/130]
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_multi_tx[fork_Prague-blockchain_test-selfdestruct_on_first_tx_True-recreate_on_first_tx_True] FAILED [ 13/130]
+tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Prague-state_test-second_suicide_CALL-first_suicide_CALL] PASSED [ 14/130]
+tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Prague-state_test-second_suicide_CALL-first_suicide_CALLCODE] PASSED [ 15/130]
+tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Prague-state_test-second_suicide_CALL-first_suicide_DELEGATECALL] PASSED [ 16/130]
+tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Prague-state_test-second_suicide_CALLCODE-first_suicide_CALL] PASSED [ 17/130]
+tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Prague-state_test-second_suicide_CALLCODE-first_suicide_CALLCODE] PASSED [ 18/130]
+tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Prague-state_test-second_suicide_CALLCODE-first_suicide_DELEGATECALL] PASSED [ 19/130]
+tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Prague-state_test-second_suicide_DELEGATECALL-first_suicide_CALL] PASSED [ 20/130]
+tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Prague-state_test-second_suicide_DELEGATECALL-first_suicide_CALLCODE] PASSED [ 21/130]
+tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Prague-state_test-second_suicide_DELEGATECALL-first_suicide_DELEGATECALL] PASSED [ 22/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-single_call-create_opcode_CREATE] PASSED [ 23/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-single_call-create_opcode_CREATE2] PASSED [ 24/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-single_call_self-create_opcode_CREATE] PASSED [ 25/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-single_call_self-create_opcode_CREATE2] PASSED [ 26/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_single_sendall_recipient-create_opcode_CREATE] PASSED [ 27/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_single_sendall_recipient-create_opcode_CREATE2] PASSED [ 28/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_single_self_recipient-create_opcode_CREATE] PASSED [ 29/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_single_self_recipient-create_opcode_CREATE2] PASSED [ 30/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_sendall_recipients-create_opcode_CREATE] PASSED [ 31/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_sendall_recipients-create_opcode_CREATE2] PASSED [ 32/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_sendall_recipients_including_self-create_opcode_CREATE] PASSED [ 33/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_sendall_recipients_including_self-create_opcode_CREATE2] PASSED [ 34/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_sendall_recipients_including_self_last-create_opcode_CREATE] PASSED [ 35/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_sendall_recipients_including_self_last-create_opcode_CREATE2] PASSED [ 36/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_repeating_sendall_recipients_including_self-create_opcode_CREATE] PASSED [ 37/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_repeating_sendall_recipients_including_self-create_opcode_CREATE2] PASSED [ 38/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_repeating_sendall_recipients_including_self_last-create_opcode_CREATE] PASSED [ 39/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_repeating_sendall_recipients_including_self_last-create_opcode_CREATE2] PASSED [ 40/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-single_call-create_opcode_CREATE] PASSED [ 41/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-single_call-create_opcode_CREATE2] PASSED [ 42/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-single_call_self-create_opcode_CREATE] PASSED [ 43/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-single_call_self-create_opcode_CREATE2] PASSED [ 44/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_single_sendall_recipient-create_opcode_CREATE] PASSED [ 45/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_single_sendall_recipient-create_opcode_CREATE2] PASSED [ 46/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_single_self_recipient-create_opcode_CREATE] PASSED [ 47/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_single_self_recipient-create_opcode_CREATE2] PASSED [ 48/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_sendall_recipients-create_opcode_CREATE] PASSED [ 49/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_sendall_recipients-create_opcode_CREATE2] PASSED [ 50/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_sendall_recipients_including_self-create_opcode_CREATE] PASSED [ 51/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_sendall_recipients_including_self-create_opcode_CREATE2] PASSED [ 52/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_sendall_recipients_including_self_last-create_opcode_CREATE] PASSED [ 53/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_sendall_recipients_including_self_last-create_opcode_CREATE2] PASSED [ 54/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_repeating_sendall_recipients_including_self-create_opcode_CREATE] PASSED [ 55/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_repeating_sendall_recipients_including_self-create_opcode_CREATE2] PASSED [ 56/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_repeating_sendall_recipients_including_self_last-create_opcode_CREATE] PASSED [ 57/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_repeating_sendall_recipients_including_self_last-create_opcode_CREATE2] PASSED [ 58/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_self_destructing_initcode[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-call_times_0-create_opcode_CREATE] PASSED [ 59/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_self_destructing_initcode[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-call_times_0-create_opcode_CREATE2] PASSED [ 60/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_self_destructing_initcode[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-call_times_1-create_opcode_CREATE] PASSED [ 61/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_self_destructing_initcode[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-call_times_1-create_opcode_CREATE2] PASSED [ 62/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_self_destructing_initcode[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-call_times_0-create_opcode_CREATE] PASSED [ 63/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_self_destructing_initcode[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-call_times_0-create_opcode_CREATE2] PASSED [ 64/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_self_destructing_initcode[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-call_times_1-create_opcode_CREATE] PASSED [ 65/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_self_destructing_initcode[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-call_times_1-create_opcode_CREATE2] PASSED [ 66/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_self_destructing_initcode_create_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-tx_value_0] PASSED [ 67/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_self_destructing_initcode_create_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-tx_value_100000] PASSED [ 68/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_self_destructing_initcode_create_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-tx_value_0] PASSED [ 69/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_self_destructing_initcode_create_tx[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-tx_value_100000] PASSED [ 70/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_recreate_self_destructed_contract_different_txs[fork_Prague-blockchain_test-call_times_1-recreate_times_1-selfdestruct_contract_initial_balance_0-selfdestruct_other_address-create_opcode_CREATE2] PASSED [ 71/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_recreate_self_destructed_contract_different_txs[fork_Prague-blockchain_test-call_times_1-recreate_times_1-selfdestruct_contract_initial_balance_0-selfdestruct_to_self-create_opcode_CREATE2] PASSED [ 72/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_recreate_self_destructed_contract_different_txs[fork_Prague-blockchain_test-call_times_1-recreate_times_1-selfdestruct_contract_initial_balance_100000-selfdestruct_other_address-create_opcode_CREATE2] PASSED [ 73/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_recreate_self_destructed_contract_different_txs[fork_Prague-blockchain_test-call_times_1-recreate_times_1-selfdestruct_contract_initial_balance_100000-selfdestruct_to_self-create_opcode_CREATE2] PASSED [ 74/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-single_call] PASSED [ 75/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-single_call_self] PASSED [ 76/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_single_sendall_recipient] PASSED [ 77/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_single_self_recipient] PASSED [ 78/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_sendall_recipients] PASSED [ 79/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_sendall_recipients_including_self] PASSED [ 80/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_sendall_recipients_including_self_last] PASSED [ 81/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_repeating_sendall_recipients_including_self] PASSED [ 82/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_0-multiple_calls_multiple_repeating_sendall_recipients_including_self_last] PASSED [ 83/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-single_call] PASSED [ 84/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-single_call_self] PASSED [ 85/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_single_sendall_recipient] PASSED [ 86/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_single_self_recipient] PASSED [ 87/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_sendall_recipients] PASSED [ 88/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_sendall_recipients_including_self] PASSED [ 89/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_sendall_recipients_including_self_last] PASSED [ 90/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_repeating_sendall_recipients_including_self] PASSED [ 91/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_pre_existing[fork_Prague-state_test-selfdestruct_contract_initial_balance_100000-multiple_calls_multiple_repeating_sendall_recipients_including_self_last] PASSED [ 92/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_created_same_block_different_tx[fork_Prague-blockchain_test-call_times_1-selfdestruct_contract_initial_balance_0] PASSED [ 93/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_created_same_block_different_tx[fork_Prague-blockchain_test-call_times_1-selfdestruct_contract_initial_balance_1] PASSED [ 94/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_created_same_block_different_tx[fork_Prague-blockchain_test-call_times_10-selfdestruct_contract_initial_balance_0] PASSED [ 95/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_selfdestruct_created_same_block_different_tx[fork_Prague-blockchain_test-call_times_10-selfdestruct_contract_initial_balance_1] PASSED [ 96/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_new_contract_to_pre_existing_contract[fork_Prague-state_test-create_opcode_CREATE-call_opcode_DELEGATECALL-selfdestruct_contract_initial_balance_0-call_times_1] PASSED [ 97/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_new_contract_to_pre_existing_contract[fork_Prague-state_test-create_opcode_CREATE-call_opcode_DELEGATECALL-selfdestruct_contract_initial_balance_1-call_times_1] PASSED [ 98/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_new_contract_to_pre_existing_contract[fork_Prague-state_test-create_opcode_CREATE-call_opcode_CALLCODE-selfdestruct_contract_initial_balance_0-call_times_1] PASSED [ 99/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_new_contract_to_pre_existing_contract[fork_Prague-state_test-create_opcode_CREATE-call_opcode_CALLCODE-selfdestruct_contract_initial_balance_1-call_times_1] PASSED [100/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_0-selfdestruct_contract_initial_balance_0-call_times_1-call_opcode_DELEGATECALL-create_opcode_CREATE] PASSED [101/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_0-selfdestruct_contract_initial_balance_0-call_times_1-call_opcode_DELEGATECALL-create_opcode_CREATE2] PASSED [102/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_0-selfdestruct_contract_initial_balance_0-call_times_1-call_opcode_CALLCODE-create_opcode_CREATE] PASSED [103/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_0-selfdestruct_contract_initial_balance_0-call_times_1-call_opcode_CALLCODE-create_opcode_CREATE2] PASSED [104/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_0-selfdestruct_contract_initial_balance_1-call_times_1-call_opcode_DELEGATECALL-create_opcode_CREATE] PASSED [105/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_0-selfdestruct_contract_initial_balance_1-call_times_1-call_opcode_DELEGATECALL-create_opcode_CREATE2] PASSED [106/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_0-selfdestruct_contract_initial_balance_1-call_times_1-call_opcode_CALLCODE-create_opcode_CREATE] PASSED [107/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_0-selfdestruct_contract_initial_balance_1-call_times_1-call_opcode_CALLCODE-create_opcode_CREATE2] PASSED [108/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_1-selfdestruct_contract_initial_balance_0-call_times_1-call_opcode_DELEGATECALL-create_opcode_CREATE] PASSED [109/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_1-selfdestruct_contract_initial_balance_0-call_times_1-call_opcode_DELEGATECALL-create_opcode_CREATE2] PASSED [110/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_1-selfdestruct_contract_initial_balance_0-call_times_1-call_opcode_CALLCODE-create_opcode_CREATE] PASSED [111/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_1-selfdestruct_contract_initial_balance_0-call_times_1-call_opcode_CALLCODE-create_opcode_CREATE2] PASSED [112/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_1-selfdestruct_contract_initial_balance_1-call_times_1-call_opcode_DELEGATECALL-create_opcode_CREATE] PASSED [113/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_1-selfdestruct_contract_initial_balance_1-call_times_1-call_opcode_DELEGATECALL-create_opcode_CREATE2] PASSED [114/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_1-selfdestruct_contract_initial_balance_1-call_times_1-call_opcode_CALLCODE-create_opcode_CREATE] PASSED [115/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_calling_from_pre_existing_contract_to_new_contract[fork_Prague-state_test-pre_existing_contract_initial_balance_1-selfdestruct_contract_initial_balance_1-call_times_1-call_opcode_CALLCODE-create_opcode_CREATE2] PASSED [116/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx_increased_nonce[fork_Prague-state_test-single_call-selfdestruct_contract_initial_balance_0-create_opcode_CREATE] PASSED [117/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx_increased_nonce[fork_Prague-state_test-single_call-selfdestruct_contract_initial_balance_0-create_opcode_CREATE2] PASSED [118/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx_increased_nonce[fork_Prague-state_test-single_call-selfdestruct_contract_initial_balance_100000-create_opcode_CREATE] PASSED [119/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx_increased_nonce[fork_Prague-state_test-single_call-selfdestruct_contract_initial_balance_100000-create_opcode_CREATE2] PASSED [120/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx_increased_nonce[fork_Prague-state_test-multiple_calls_single beneficiary-selfdestruct_contract_initial_balance_0-create_opcode_CREATE] PASSED [121/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx_increased_nonce[fork_Prague-state_test-multiple_calls_single beneficiary-selfdestruct_contract_initial_balance_0-create_opcode_CREATE2] PASSED [122/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx_increased_nonce[fork_Prague-state_test-multiple_calls_single beneficiary-selfdestruct_contract_initial_balance_100000-create_opcode_CREATE] PASSED [123/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct.py::test_create_selfdestruct_same_tx_increased_nonce[fork_Prague-state_test-multiple_calls_single beneficiary-selfdestruct_contract_initial_balance_100000-create_opcode_CREATE2] PASSED [124/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct_revert.py::test_selfdestruct_created_in_same_tx_with_revert[fork_Prague-state_test-no_outer_selfdestruct-same_tx] PASSED [125/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct_revert.py::test_selfdestruct_created_in_same_tx_with_revert[fork_Prague-state_test-outer_selfdestruct_before_inner_call-same_tx] PASSED [126/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct_revert.py::test_selfdestruct_created_in_same_tx_with_revert[fork_Prague-state_test-outer_selfdestruct_after_inner_call-same_tx] PASSED [127/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct_revert.py::test_selfdestruct_not_created_in_same_tx_with_revert[fork_Prague-state_test-no_outer_selfdestruct-not_same_tx-init_balance_2] PASSED [128/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct_revert.py::test_selfdestruct_not_created_in_same_tx_with_revert[fork_Prague-state_test-outer_selfdestruct_before_inner_call-not_same_tx-init_balance_2] PASSED [129/130]
+tests/cancun/eip6780_selfdestruct/test_selfdestruct_revert.py::test_selfdestruct_not_created_in_same_tx_with_revert[fork_Prague-state_test-outer_selfdestruct_after_inner_call-not_same_tx-init_balance_2] PASSED [130/130]
+
+=================================== FAILURES ===================================
+_ test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_True-call_create2_contract_at_the_end_True-create2_dest_already_in_state_True] _
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:154: in test_dynamic_create2_selfdestruct_collision
+    pre[create2_address] = Account(
+    ^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:126: in __setitem__
+    raise ValueError("Tests are not allowed to set pre-alloc items in execute mode")
+E   ValueError: Tests are not allowed to set pre-alloc items in execute mode
+---------------------------- Captured stdout setup -----------------------------
+Starting EOA index: 0x3d886ead5a230babd644d80af98824ad62d0857a10aa7a4cba2450da9e780741
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 287240
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000048559699999728
+_ test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_True-call_create2_contract_at_the_end_True-create2_dest_already_in_state_False] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x20f082BAb1cEAeaD7Fe8F40fC060Eb63f5E6C4b9, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:212: in test_dynamic_create2_selfdestruct_collision
+    state_test(pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x20f082BAb1cEAeaD7Fe8F40fC060Eb63f5E6C4b9, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 287240
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000048559699999728
+_ test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_True-call_create2_contract_at_the_end_False-create2_dest_already_in_state_True] _
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:154: in test_dynamic_create2_selfdestruct_collision
+    pre[create2_address] = Account(
+    ^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:126: in __setitem__
+    raise ValueError("Tests are not allowed to set pre-alloc items in execute mode")
+E   ValueError: Tests are not allowed to set pre-alloc items in execute mode
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 279002
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000048147300000245
+_ test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_True-call_create2_contract_at_the_end_False-create2_dest_already_in_state_False] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xee6AA0D864D8b9D86c12B09E836F01F32dc08A13, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:212: in test_dynamic_create2_selfdestruct_collision
+    state_test(pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xee6AA0D864D8b9D86c12B09E836F01F32dc08A13, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 279002
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000048147300000245
+_ test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_False-call_create2_contract_at_the_end_True-create2_dest_already_in_state_True] _
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:154: in test_dynamic_create2_selfdestruct_collision
+    pre[create2_address] = Account(
+    ^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:126: in __setitem__
+    raise ValueError("Tests are not allowed to set pre-alloc items in execute mode")
+E   ValueError: Tests are not allowed to set pre-alloc items in execute mode
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 279002
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000048147300000245
+_ test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_False-call_create2_contract_at_the_end_True-create2_dest_already_in_state_False] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x53956c6c893F9962DF2A77Fb3C401BC6d39a2803, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:212: in test_dynamic_create2_selfdestruct_collision
+    state_test(pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x53956c6c893F9962DF2A77Fb3C401BC6d39a2803, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 279002
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000048147300000245
+_ test_dynamic_create2_selfdestruct_collision_two_different_transactions[fork_Prague-blockchain_test-call_create2_contract_at_the_end_True-create2_dest_already_in_state_True] _
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:340: in test_dynamic_create2_selfdestruct_collision_two_different_transactions
+    pre[create2_address] = Account(
+    ^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:126: in __setitem__
+    raise ValueError("Tests are not allowed to set pre-alloc items in execute mode")
+E   ValueError: Tests are not allowed to set pre-alloc items in execute mode
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 205358
+Deploying contract with gas limit: 190784
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000054006600000100
+_ test_dynamic_create2_selfdestruct_collision_two_different_transactions[fork_Prague-blockchain_test-call_create2_contract_at_the_end_True-create2_dest_already_in_state_False] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xEDf5EdB2001e030439Fb7763044C4150caE34B95, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:419: in test_dynamic_create2_selfdestruct_collision_two_different_transactions
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xEDf5EdB2001e030439Fb7763044C4150caE34B95, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 205358
+Deploying contract with gas limit: 190784
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000054006600000100
+_ test_dynamic_create2_selfdestruct_collision_two_different_transactions[fork_Prague-blockchain_test-call_create2_contract_at_the_end_False-create2_dest_already_in_state_True] _
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:340: in test_dynamic_create2_selfdestruct_collision_two_different_transactions
+    pre[create2_address] = Account(
+    ^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:126: in __setitem__
+    raise ValueError("Tests are not allowed to set pre-alloc items in execute mode")
+E   ValueError: Tests are not allowed to set pre-alloc items in execute mode
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 205310
+Deploying contract with gas limit: 182522
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000053591200000369
+_ test_dynamic_create2_selfdestruct_collision_two_different_transactions[fork_Prague-blockchain_test-call_create2_contract_at_the_end_False-create2_dest_already_in_state_False] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x8a58f68e4C48EE17895691d78bf49897026d616b, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:419: in test_dynamic_create2_selfdestruct_collision_two_different_transactions
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x8a58f68e4C48EE17895691d78bf49897026d616b, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 205358
+Deploying contract with gas limit: 182546
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000053594799999779
+_ test_dynamic_create2_selfdestruct_collision_multi_tx[fork_Prague-blockchain_test-selfdestruct_on_first_tx_False-recreate_on_first_tx_False] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xA81Cdf53cd9472EC1a36c59F25a6adB84b18c608, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:653: in test_dynamic_create2_selfdestruct_collision_multi_tx
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xA81Cdf53cd9472EC1a36c59F25a6adB84b18c608, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 279986
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000048197099999925
+_ test_dynamic_create2_selfdestruct_collision_multi_tx[fork_Prague-blockchain_test-selfdestruct_on_first_tx_True-recreate_on_first_tx_False] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x753BB4E96CF3C38b395a18961245f90C44e9D7cD, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:653: in test_dynamic_create2_selfdestruct_collision_multi_tx
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x753BB4E96CF3C38b395a18961245f90C44e9D7cD, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 280850
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000048240299999947
+_ test_dynamic_create2_selfdestruct_collision_multi_tx[fork_Prague-blockchain_test-selfdestruct_on_first_tx_True-recreate_on_first_tx_True] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x13b393d0013f87eA76f9c7c987fe8D5e109F3969, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py:653: in test_dynamic_create2_selfdestruct_collision_multi_tx
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x13b393d0013f87eA76f9c7c987fe8D5e109F3969, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108470
+Deploying contract with gas limit: 115262
+Deploying contract with gas limit: 280850
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=7.000048240299999947
+=========================== short test summary info ============================
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_True-call_create2_contract_at_the_end_True-create2_dest_already_in_state_True]
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_True-call_create2_contract_at_the_end_True-create2_dest_already_in_state_False]
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_True-call_create2_contract_at_the_end_False-create2_dest_already_in_state_True]
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_True-call_create2_contract_at_the_end_False-create2_dest_already_in_state_False]
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_False-call_create2_contract_at_the_end_True-create2_dest_already_in_state_True]
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision[fork_Prague-state_test-call_create2_contract_in_between_False-call_create2_contract_at_the_end_True-create2_dest_already_in_state_False]
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_two_different_transactions[fork_Prague-blockchain_test-call_create2_contract_at_the_end_True-create2_dest_already_in_state_True]
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_two_different_transactions[fork_Prague-blockchain_test-call_create2_contract_at_the_end_True-create2_dest_already_in_state_False]
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_two_different_transactions[fork_Prague-blockchain_test-call_create2_contract_at_the_end_False-create2_dest_already_in_state_True]
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_two_different_transactions[fork_Prague-blockchain_test-call_create2_contract_at_the_end_False-create2_dest_already_in_state_False]
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_multi_tx[fork_Prague-blockchain_test-selfdestruct_on_first_tx_False-recreate_on_first_tx_False]
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_multi_tx[fork_Prague-blockchain_test-selfdestruct_on_first_tx_True-recreate_on_first_tx_False]
+FAILED tests/cancun/eip6780_selfdestruct/test_dynamic_create2_selfdestruct_collision.py::test_dynamic_create2_selfdestruct_collision_multi_tx[fork_Prague-blockchain_test-selfdestruct_on_first_tx_True-recreate_on_first_tx_True]
+================== 13 failed, 117 passed in 187.25s (0:03:07) ==================
