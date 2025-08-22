@@ -5,15 +5,22 @@ This is a fork of https://github.com/ethereum/execution-spec-tests
 The Goal of forking Ethereum's Execution Spec tests was to verify that Arbitrum is working as expected well reusing existing tests and infrastructure.
 
 ## Removed EIP's
-- 4788
-- 4844
 - 2537
-- 6110
-- 7002
-- 7251
-- 7685
 - 3651
 - 4895
+
+### Not supported in ArbOS 20, EIP's from Cancun
+- EIP-4788: Beacon block root in the EVM
+- EIP-7516: BLOBBASEFEE instruction  
+##### Arbitrum can post/retrieve EIP-4844 from L1, but doesn't support the mechanics on Arbitrum
+- EIP-4844: Shard Blob Transactions
+
+### Not supported in ArbOS 40, EIP's from Prague
+- EIP-6110: Supply validator deposits on chain
+- EIP-7002: Execution layer triggerable withdrawals
+- EIP-7251: Increase the MAX_EFFECTIVE_BALANCE
+- EIP-7623: Increase calldata cost
+- EIP-7685: General purpose execution layer requests
 
 I believe these EIP's weren't implemented in Arbitrum Nitro, so I removed them from the tests.
 

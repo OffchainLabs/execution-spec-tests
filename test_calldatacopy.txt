@@ -1,0 +1,277 @@
+Executing: pytest -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 
+--rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/frontier/opcodes/test_calldatacopy.py --verbose
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0 -- /home/kolby/ドキュメント/GitHub/execution-spec-tests/.venv/bin/python3
+[1mGenerating fixtures for: Prague[39;49m
+[1m[93mOnly generating fixtures with stable/deployed forks: Specify an upcoming fork via --until=fork to add forks under development.[39;49m
+[1mStart seed for EOA: 0xc5ecf4739926a9db0ba297c87d9ae1c1cb913076bdc5899e6d8e66f95dc8115b [39;49m
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.13', 'Platform': 'Linux-6.14.0-28-generic-x86_64-with-glibc2.41', 'Packages': {'pytest': '8.4.1', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'custom-report': '1.0.1', 'regex': '0.2.0', 'xdist': '3.8.0', 'metadata': '3.1.1', 'cov': '4.1.0', 'html': '4.1.1'}, 'Command-line args': '<code>fill -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/frontier/opcodes/test_calldatacopy.py --verbose</code>', 'Senders': {}}
+rootdir: /home/kolby/ドキュメント/GitHub/execution-spec-tests
+configfile: src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini
+plugins: json-report-1.5.0, custom-report-1.0.1, regex-0.2.0, xdist-3.8.0, metadata-3.1.1, cov-4.1.0, html-4.1.1
+collecting ...  pytest-regex selected 8 tests to run for regex: .*
+collected 8 items
+
+tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-cdc 0 1 2] FAILED [1/8]
+tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-cdc 0 1 1] FAILED [2/8]
+tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-cdc 0 1 0] FAILED [3/8]
+tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-cdc 0 0 0] FAILED [4/8]
+tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-cdc 0 neg6 ff] FAILED [5/8]
+tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-cdc 0 neg6 9] FAILED [6/8]
+tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-underflow] FAILED [7/8]
+tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-sec] FAILED [8/8]
+
+=================================== FAILURES ===================================
+_____________ test_calldatacopy[fork_Prague-state_test-cdc 0 1 2] ______________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xAaee8A4505e7e9Aa6Dba8Bdf47e98eaC8B6377C7, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_calldatacopy.py:186: in test_calldatacopy
+    state_test(pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xAaee8A4505e7e9Aa6Dba8Bdf47e98eaC8B6377C7, maxFeePerGas: 10 baseFee: 100000000)
+---------------------------- Captured stdout setup -----------------------------
+Starting EOA index: 0xc5ecf4739926a9db0ba297c87d9ae1c1cb913076bdc5899e6d8e66f95dc8115b
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 113558
+Deploying contract with gas limit: 137282
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000035647600000000
+_____________ test_calldatacopy[fork_Prague-state_test-cdc 0 1 1] ______________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x06E8c9e022b252BBeA18866987B09ccAab612ACe, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_calldatacopy.py:186: in test_calldatacopy
+    state_test(pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x06E8c9e022b252BBeA18866987B09ccAab612ACe, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 113558
+Deploying contract with gas limit: 137306
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000035648800000000
+_____________ test_calldatacopy[fork_Prague-state_test-cdc 0 1 0] ______________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x2D887c0C6bfd5217A215652C4D90aA544752FD35, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_calldatacopy.py:186: in test_calldatacopy
+    state_test(pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x2D887c0C6bfd5217A215652C4D90aA544752FD35, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 113534
+Deploying contract with gas limit: 137306
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000035647600000000
+_____________ test_calldatacopy[fork_Prague-state_test-cdc 0 0 0] ______________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x0C00cC2743eE4D1Df50541a2dC621e7d8131cB92, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_calldatacopy.py:186: in test_calldatacopy
+    state_test(pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x0C00cC2743eE4D1Df50541a2dC621e7d8131cB92, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 113510
+Deploying contract with gas limit: 137306
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000035646400000000
+___________ test_calldatacopy[fork_Prague-state_test-cdc 0 neg6 ff] ____________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xF4d6767c51B4666CD96b1aa84Fbf83ac3BFc659a, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_calldatacopy.py:186: in test_calldatacopy
+    state_test(pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xF4d6767c51B4666CD96b1aa84Fbf83ac3BFc659a, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 126956
+Deploying contract with gas limit: 137306
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000036319200000000
+____________ test_calldatacopy[fork_Prague-state_test-cdc 0 neg6 9] ____________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x197ef235ee0CB6438f8bCfCd3257718434b675E5, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_calldatacopy.py:186: in test_calldatacopy
+    state_test(pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x197ef235ee0CB6438f8bCfCd3257718434b675E5, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 126956
+Deploying contract with gas limit: 137306
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000036319200000000
+_____________ test_calldatacopy[fork_Prague-state_test-underflow] ______________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xf1284e41d5D6FB1688acC16Bd64d6E4E1fb5AeE5, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_calldatacopy.py:186: in test_calldatacopy
+    state_test(pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0xf1284e41d5D6FB1688acC16Bd64d6E4E1fb5AeE5, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 110630
+Deploying contract with gas limit: 137306
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000035502400000000
+________________ test_calldatacopy[fork_Prague-state_test-sec] _________________
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x775fDc0bbc929e213418d36C2898C55347eF69EC, maxFeePerGas: 10 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/frontier/opcodes/test_calldatacopy.py:186: in test_calldatacopy
+    state_test(pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x775fDc0bbc929e213418d36C2898C55347eF69EC, maxFeePerGas: 10 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 122660
+Deploying contract with gas limit: 137306
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000036104400000000
+=========================== short test summary info ============================
+FAILED tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-cdc 0 1 2]
+FAILED tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-cdc 0 1 1]
+FAILED tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-cdc 0 1 0]
+FAILED tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-cdc 0 0 0]
+FAILED tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-cdc 0 neg6 ff]
+FAILED tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-cdc 0 neg6 9]
+FAILED tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-underflow]
+FAILED tests/frontier/opcodes/test_calldatacopy.py::test_calldatacopy[fork_Prague-state_test-sec]
+============================== 8 failed in 8.08s ===============================

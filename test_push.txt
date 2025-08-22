@@ -1,0 +1,355 @@
+Executing: pytest -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 
+--rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/frontier/opcodes/test_push.py --verbose
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0 -- /home/kolby/ドキュメント/GitHub/execution-spec-tests/.venv/bin/python3
+[1mGenerating fixtures for: Prague[39;49m
+[1m[93mOnly generating fixtures with stable/deployed forks: Specify an upcoming fork via --until=fork to add forks under development.[39;49m
+[1mStart seed for EOA: 0x1808f8f5c7b96c33229e32da55cdd2a02dd519afbd488a4e3237065798231ea4 [39;49m
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.13', 'Platform': 'Linux-6.14.0-28-generic-x86_64-with-glibc2.41', 'Packages': {'pytest': '8.4.1', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'custom-report': '1.0.1', 'regex': '0.2.0', 'xdist': '3.8.0', 'metadata': '3.1.1', 'cov': '4.1.0', 'html': '4.1.1'}, 'Command-line args': '<code>fill -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/frontier/opcodes/test_push.py --verbose</code>', 'Senders': {}}
+rootdir: /home/kolby/ドキュメント/GitHub/execution-spec-tests
+configfile: src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini
+plugins: json-report-1.5.0, custom-report-1.0.1, regex-0.2.0, xdist-3.8.0, metadata-3.1.1, cov-4.1.0, html-4.1.1
+collecting ...  pytest-regex selected 96 tests to run for regex: .*
+collected 96 items
+
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH1] PASSED [ 1/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH2] PASSED [ 2/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH3] PASSED [ 3/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH4] PASSED [ 4/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH5] PASSED [ 5/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH6] PASSED [ 6/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH7] PASSED [ 7/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH8] PASSED [ 8/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH9] PASSED [ 9/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH10] PASSED [10/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH11] PASSED [11/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH12] PASSED [12/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH13] PASSED [13/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH14] PASSED [14/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH15] PASSED [15/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH16] PASSED [16/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH17] PASSED [17/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH18] PASSED [18/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH19] PASSED [19/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH20] PASSED [20/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH21] PASSED [21/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH22] PASSED [22/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH23] PASSED [23/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH24] PASSED [24/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH25] PASSED [25/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH26] PASSED [26/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH27] PASSED [27/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH28] PASSED [28/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH29] PASSED [29/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH30] PASSED [30/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH31] PASSED [31/96]
+tests/frontier/opcodes/test_push.py::test_push[fork_Prague-state_test-PUSH32] PASSED [32/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH1] PASSED [33/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH2] PASSED [34/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH3] PASSED [35/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH4] PASSED [36/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH5] PASSED [37/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH6] PASSED [38/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH7] PASSED [39/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH8] PASSED [40/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH9] PASSED [41/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH10] PASSED [42/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH11] PASSED [43/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH12] PASSED [44/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH13] PASSED [45/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH14] PASSED [46/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH15] PASSED [47/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH16] PASSED [48/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH17] PASSED [49/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH18] PASSED [50/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH19] PASSED [51/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH20] PASSED [52/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH21] PASSED [53/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH22] PASSED [54/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH23] FAILED [55/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH24] FAILED [56/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH25] FAILED [57/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH26] FAILED [58/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH27] FAILED [59/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH28] FAILED [60/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH29] FAILED [61/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH30] FAILED [62/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH31] FAILED [63/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH32] FAILED [64/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH1] PASSED [65/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH2] PASSED [66/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH3] PASSED [67/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH4] PASSED [68/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH5] PASSED [69/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH6] PASSED [70/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH7] PASSED [71/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH8] PASSED [72/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH9] PASSED [73/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH10] PASSED [74/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH11] PASSED [75/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH12] PASSED [76/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH13] PASSED [77/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH14] PASSED [78/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH15] PASSED [79/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH16] PASSED [80/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH17] PASSED [81/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH18] PASSED [82/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH19] PASSED [83/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH20] PASSED [84/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH21] PASSED [85/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH22] PASSED [86/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH23] FAILED [87/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH24] FAILED [88/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH25] FAILED [89/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH26] FAILED [90/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH27] FAILED [91/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH28] FAILED [92/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH29] FAILED [93/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH30] FAILED [94/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH31] FAILED [95/96]
+tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH32] FAILED [96/96]
+
+=================================== FAILURES ===================================
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH23] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 24577 > 24576
+E   assert 24577 <= 24576
+E    +  where 24577 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b3435241d10>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH24] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 25601 > 24576
+E   assert 25601 <= 24576
+E    +  where 25601 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b343539d1d0>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH25] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 26625 > 24576
+E   assert 26625 <= 24576
+E    +  where 26625 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b3435376f10>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH26] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 27649 > 24576
+E   assert 27649 <= 24576
+E    +  where 27649 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b34353603d0>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH27] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 28673 > 24576
+E   assert 28673 <= 24576
+E    +  where 28673 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b3435345ed0>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH28] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 29697 > 24576
+E   assert 29697 <= 24576
+E    +  where 29697 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b34353b10d0>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH29] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 30721 > 24576
+E   assert 30721 <= 24576
+E    +  where 30721 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b343534c350>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH30] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 31745 > 24576
+E   assert 31745 <= 24576
+E    +  where 31745 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b34353bf690>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH31] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 32769 > 24576
+E   assert 32769 <= 24576
+E    +  where 32769 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b34353dc250>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH32] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 33793 > 24576
+E   assert 33793 <= 24576
+E    +  where 33793 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b343523dd50>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH23] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 24601 > 24576
+E   assert 24601 <= 24576
+E    +  where 24601 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b3435127f50>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH24] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 25626 > 24576
+E   assert 25626 <= 24576
+E    +  where 25626 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b34351513d0>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH25] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 26651 > 24576
+E   assert 26651 <= 24576
+E    +  where 26651 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b34353bed50>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH26] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 27676 > 24576
+E   assert 27676 <= 24576
+E    +  where 27676 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b34353cc890>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH27] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 28701 > 24576
+E   assert 28701 <= 24576
+E    +  where 28701 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b3435153a90>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH28] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 29726 > 24576
+E   assert 29726 <= 24576
+E    +  where 29726 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b3435390a10>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH29] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 30751 > 24576
+E   assert 30751 <= 24576
+E    +  where 30751 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b34352a1fd0>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH30] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 31776 > 24576
+E   assert 31776 <= 24576
+E    +  where 31776 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b3435401890>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH31] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 32801 > 24576
+E   assert 32801 <= 24576
+E    +  where 32801 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b34352e90d0>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH32] _____
+tests/frontier/opcodes/test_push.py:116: in test_stack_overflow
+    contract = pre.deploy_contract(contract_code)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:173: in deploy_contract
+    assert len(code) <= MAX_BYTECODE_SIZE, f"code too large: {len(code)} > {MAX_BYTECODE_SIZE}"
+E   AssertionError: code too large: 33826 > 24576
+E   assert 33826 <= 24576
+E    +  where 33826 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x7b34351248d0>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+=========================== short test summary info ============================
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH23]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH24]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH25]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH26]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH27]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH28]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH29]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH30]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH31]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1024-PUSH32]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH23]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH24]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH25]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH26]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH27]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH28]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH29]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH30]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH31]
+FAILED tests/frontier/opcodes/test_push.py::test_stack_overflow[fork_Prague-state_test-stack_height_1025-PUSH32]
+=================== 20 failed, 76 passed in 76.24s (0:01:16) ===================

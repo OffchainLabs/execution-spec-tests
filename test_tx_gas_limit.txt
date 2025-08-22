@@ -1,0 +1,39 @@
+Executing: pytest -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 
+--rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/osaka/eip7825_transaction_gas_limit_cap/test_tx_gas_limit.py --verbose
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0 -- /home/kolby/ドキュメント/GitHub/execution-spec-tests/.venv/bin/python3
+[1mGenerating fixtures for: Prague[39;49m
+[1m[93mOnly generating fixtures with stable/deployed forks: Specify an upcoming fork via --until=fork to add forks under development.[39;49m
+[1mStart seed for EOA: 0x193fae274f9cdfaaf5d7caa56f4108848e24d13ccee183ccde49738ab3b942a1 [39;49m
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.13', 'Platform': 'Linux-6.14.0-28-generic-x86_64-with-glibc2.41', 'Packages': {'pytest': '8.4.1', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'custom-report': '1.0.1', 'regex': '0.2.0', 'xdist': '3.8.0', 'metadata': '3.1.1', 'cov': '4.1.0', 'html': '4.1.1'}, 'Command-line args': '<code>fill -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/osaka/eip7825_transaction_gas_limit_cap/test_tx_gas_limit.py --verbose</code>', 'Senders': {}}
+rootdir: /home/kolby/ドキュメント/GitHub/execution-spec-tests
+configfile: src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini
+plugins: json-report-1.5.0, custom-report-1.0.1, regex-0.2.0, xdist-3.8.0, metadata-3.1.1, cov-4.1.0, html-4.1.1
+collecting ...  pytest-regex selected 6 tests to run for regex: .*
+collected 6 items
+
+tests/osaka/eip7825_transaction_gas_limit_cap/test_tx_gas_limit.py::test_transaction_gas_limit_cap[fork_Prague-tx_gas_limit_cap_none0-state_test] PASSED [1/5]
+tests/osaka/eip7825_transaction_gas_limit_cap/test_tx_gas_limit.py::test_transaction_gas_limit_cap[fork_Prague-tx_gas_limit_cap_none1-state_test] FAILED [2/5]
+tests/osaka/eip7825_transaction_gas_limit_cap/test_tx_gas_limit.py::test_transaction_gas_limit_cap[fork_Prague-tx_gas_limit_cap_none2-state_test] PASSED [3/5]
+tests/osaka/eip7825_transaction_gas_limit_cap/test_tx_gas_limit.py::test_transaction_gas_limit_cap[fork_Prague-tx_gas_limit_cap_none3-state_test] PASSED [4/5]
+tests/osaka/eip7825_transaction_gas_limit_cap/test_tx_gas_limit.py::test_transaction_gas_limit_cap[fork_Prague-tx_gas_limit_cap_none4-state_test] PASSED [5/5]
+
+=================================== FAILURES ===================================
+_ test_transaction_gas_limit_cap[fork_Prague-tx_gas_limit_cap_none1-state_test] _
+tests/osaka/eip7825_transaction_gas_limit_cap/test_tx_gas_limit.py:115: in test_transaction_gas_limit_cap
+    state_test(env=env, pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:28: in execute
+    assert not any(tx.ty == 3 for block in self.blocks for tx in block), (
+E   AssertionError: Transaction type 3 is not supported in execute mode.
+E   assert not True
+E    +  where True = any(<generator object TransactionPost.execute.<locals>.<genexpr> at 0x76623a7d6a40>)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108854
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000028545000000000
+=========================== short test summary info ============================
+FAILED tests/osaka/eip7825_transaction_gas_limit_cap/test_tx_gas_limit.py::test_transaction_gas_limit_cap[fork_Prague-tx_gas_limit_cap_none1-state_test]
+========================= 1 failed, 4 passed in 4.82s ==========================

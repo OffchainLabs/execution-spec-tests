@@ -1,0 +1,294 @@
+Executing: pytest -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 
+--rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/frontier/opcodes/test_all_opcodes.py --verbose
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0 -- /home/kolby/ドキュメント/GitHub/execution-spec-tests/.venv/bin/python3
+[1mGenerating fixtures for: Prague[39;49m
+[1m[93mOnly generating fixtures with stable/deployed forks: Specify an upcoming fork via --until=fork to add forks under development.[39;49m
+[1mStart seed for EOA: 0xc3f8d45b09ac2e76c25299f06b12a73ef6a6e7b5545da012870ec5c7d84a3b68 [39;49m
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.13', 'Platform': 'Linux-6.14.0-28-generic-x86_64-with-glibc2.41', 'Packages': {'pytest': '8.4.1', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'custom-report': '1.0.1', 'regex': '0.2.0', 'xdist': '3.8.0', 'metadata': '3.1.1', 'cov': '4.1.0', 'html': '4.1.1'}, 'Command-line args': '<code>fill -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/frontier/opcodes/test_all_opcodes.py --verbose</code>', 'Senders': {}}
+rootdir: /home/kolby/ドキュメント/GitHub/execution-spec-tests
+configfile: src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini
+plugins: json-report-1.5.0, custom-report-1.0.1, regex-0.2.0, xdist-3.8.0, metadata-3.1.1, cov-4.1.0, html-4.1.1
+collecting ...  pytest-regex selected 2 tests to run for regex: .*
+collected 2 items
+
+tests/frontier/opcodes/test_all_opcodes.py::test_all_opcodes[fork_Prague-state_test] FAILED [1/2]
+tests/frontier/opcodes/test_all_opcodes.py::test_cover_revert[fork_Prague-state_test] PASSED [2/2]
+
+=================================== FAILURES ===================================
+___________________ test_all_opcodes[fork_Prague-state_test] ___________________
+tests/frontier/opcodes/test_all_opcodes.py:109: in test_all_opcodes
+    state_test(pre=pre, post=post, tx=tx)
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x4a of 0x20584886179c2176491e7eb4d13c1de376981cfe is 0x0000000000000000000000000000000000000000000000000000000000000000,expected 0x01.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' == 1
+---------------------------- Captured stdout setup -----------------------------
+Starting EOA index: 0xc3f8d45b09ac2e76c25299f06b12a73ef6a6e7b5545da012870ec5c7d84a3b68
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 134786
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 109670
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 108038
+Deploying contract with gas limit: 108902
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 113606
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 114470
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 134810
+Deploying contract with gas limit: 4298784
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.002782793300002570
+=========================== short test summary info ============================
+FAILED tests/frontier/opcodes/test_all_opcodes.py::test_all_opcodes[fork_Prague-state_test]
+==================== 1 failed, 1 passed in 66.19s (0:01:06) ====================

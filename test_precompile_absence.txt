@@ -1,0 +1,69 @@
+Executing: pytest -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 
+--rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/frontier/precompiles/test_precompile_absence.py --verbose
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0 -- /home/kolby/ドキュメント/GitHub/execution-spec-tests/.venv/bin/python3
+[1mGenerating fixtures for: Prague[39;49m
+[1m[93mOnly generating fixtures with stable/deployed forks: Specify an upcoming fork via --until=fork to add forks under development.[39;49m
+[1mStart seed for EOA: 0x7d15946959f663b1bbc2f3e34bab1898d9203ed79e6e2bd02f99a0c95f82cf2c [39;49m
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.13', 'Platform': 'Linux-6.14.0-28-generic-x86_64-with-glibc2.41', 'Packages': {'pytest': '8.4.1', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'custom-report': '1.0.1', 'regex': '0.2.0', 'xdist': '3.8.0', 'metadata': '3.1.1', 'cov': '4.1.0', 'html': '4.1.1'}, 'Command-line args': '<code>fill -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/frontier/precompiles/test_precompile_absence.py --verbose</code>', 'Senders': {}}
+rootdir: /home/kolby/ドキュメント/GitHub/execution-spec-tests
+configfile: src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini
+plugins: json-report-1.5.0, custom-report-1.0.1, regex-0.2.0, xdist-3.8.0, metadata-3.1.1, cov-4.1.0, html-4.1.1
+collecting ...  pytest-regex selected 3 tests to run for regex: .*
+collected 3 items
+
+tests/frontier/precompiles/test_precompile_absence.py::test_precompile_absence[fork_Prague-state_test-empty_calldata] FAILED [1/3]
+tests/frontier/precompiles/test_precompile_absence.py::test_precompile_absence[fork_Prague-state_test-31_bytes] FAILED [2/3]
+tests/frontier/precompiles/test_precompile_absence.py::test_precompile_absence[fork_Prague-state_test-32_bytes] FAILED [3/3]
+
+=================================== FAILURES ===================================
+________ test_precompile_absence[fork_Prague-state_test-empty_calldata] ________
+tests/frontier/precompiles/test_precompile_absence.py:57: in test_precompile_absence
+    entry_point_address = pre.deploy_contract(call_code, storage=storage.canary())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:183: in deploy_contract
+    initcode = Initcode(deploy_code=code, initcode_prefix=initcode_prefix)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_tools/code/generators.py:80: in __new__
+    assert no_prefix_length + len(initcode_prefix) <= 0xFF, "initcode prefix too long"
+E   AssertionError: initcode prefix too long
+E   assert (11 + 3360) <= 255
+E    +  where 3360 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x70457f1a8e50>)
+---------------------------- Captured stdout setup -----------------------------
+Starting EOA index: 0x7d15946959f663b1bbc2f3e34bab1898d9203ed79e6e2bd02f99a0c95f82cf2c
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+___________ test_precompile_absence[fork_Prague-state_test-31_bytes] ___________
+tests/frontier/precompiles/test_precompile_absence.py:57: in test_precompile_absence
+    entry_point_address = pre.deploy_contract(call_code, storage=storage.canary())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:183: in deploy_contract
+    initcode = Initcode(deploy_code=code, initcode_prefix=initcode_prefix)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_tools/code/generators.py:80: in __new__
+    assert no_prefix_length + len(initcode_prefix) <= 0xFF, "initcode prefix too long"
+E   AssertionError: initcode prefix too long
+E   assert (11 + 3360) <= 255
+E    +  where 3360 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x70457f292cd0>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+___________ test_precompile_absence[fork_Prague-state_test-32_bytes] ___________
+tests/frontier/precompiles/test_precompile_absence.py:57: in test_precompile_absence
+    entry_point_address = pre.deploy_contract(call_code, storage=storage.canary())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:183: in deploy_contract
+    initcode = Initcode(deploy_code=code, initcode_prefix=initcode_prefix)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_tools/code/generators.py:80: in __new__
+    assert no_prefix_length + len(initcode_prefix) <= 0xFF, "initcode prefix too long"
+E   AssertionError: initcode prefix too long
+E   assert (11 + 3360) <= 255
+E    +  where 3360 = len(<ethereum_test_vm.bytecode.Bytecode object at 0x70457f1a68d0>)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+=========================== short test summary info ============================
+FAILED tests/frontier/precompiles/test_precompile_absence.py::test_precompile_absence[fork_Prague-state_test-empty_calldata]
+FAILED tests/frontier/precompiles/test_precompile_absence.py::test_precompile_absence[fork_Prague-state_test-31_bytes]
+FAILED tests/frontier/precompiles/test_precompile_absence.py::test_precompile_absence[fork_Prague-state_test-32_bytes]
+============================== 3 failed in 0.14s ===============================

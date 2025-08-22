@@ -1,0 +1,598 @@
+Executing: pytest -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 
+--rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/prague/eip7702_set_code_tx/test_set_code_txs.py --verbose
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.4.1, pluggy-1.6.0 -- /home/kolby/ドキュメント/GitHub/execution-spec-tests/.venv/bin/python3
+[1mGenerating fixtures for: Prague[39;49m
+[1m[93mOnly generating fixtures with stable/deployed forks: Specify an upcoming fork via --until=fork to add forks under development.[39;49m
+[1mStart seed for EOA: 0x787b2a441bfa51e08d8674d95558843c7fdbb995e7c75fab21d7ad27a3569c72 [39;49m
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.13', 'Platform': 'Linux-6.14.0-28-generic-x86_64-with-glibc2.41', 'Packages': {'pytest': '8.4.1', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'custom-report': '1.0.1', 'regex': '0.2.0', 'xdist': '3.8.0', 'metadata': '3.1.1', 'cov': '4.1.0', 'html': '4.1.1'}, 'Command-line args': '<code>fill -c /home/kolby/ドキュメント/GitHub/execution-spec-tests/src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini --rootdir . --fork=Prague --rpc-endpoint=http://127.0.0.1:8547 --rpc-seed-key 0xb6b15c8cb491557369f3c7d2c287b053eb229daa9c22138887752191c9520659 --rpc-chain-id 412346 ./tests/prague/eip7702_set_code_tx/test_set_code_txs.py --verbose</code>', 'Senders': {}}
+rootdir: /home/kolby/ドキュメント/GitHub/execution-spec-tests
+configfile: src/cli/pytest_commands/pytest_ini_files/pytest-execute.ini
+plugins: json-report-1.5.0, custom-report-1.0.1, regex-0.2.0, xdist-3.8.0, metadata-3.1.1, cov-4.1.0, html-4.1.1
+collecting ...  pytest-regex selected 310 tests to run for regex: .*
+collected 310 items
+
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_self_sponsored_set_code[fork_Prague-state_test-stop-tx_value_0] PASSED [  1/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_self_sponsored_set_code[fork_Prague-state_test-stop-tx_value_1] PASSED [  2/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_self_sponsored_set_code[fork_Prague-state_test-return-tx_value_0] PASSED [  3/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_self_sponsored_set_code[fork_Prague-state_test-return-tx_value_1] PASSED [  4/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_self_sponsored_set_code[fork_Prague-state_test-revert-tx_value_0] PASSED [  5/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_self_sponsored_set_code[fork_Prague-state_test-revert-tx_value_1] PASSED [  6/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_self_sponsored_set_code[fork_Prague-state_test-invalid-tx_value_0] PASSED [  7/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_self_sponsored_set_code[fork_Prague-state_test-invalid-tx_value_1] PASSED [  8/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_self_sponsored_set_code[fork_Prague-state_test-out-of-gas-tx_value_0] PASSED [  9/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_self_sponsored_set_code[fork_Prague-state_test-out-of-gas-tx_value_1] PASSED [ 10/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-stop-tx_value_0-zero_balance_authority] PASSED [ 11/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-stop-tx_value_0-one_wei_balance_authority] PASSED [ 12/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-stop-tx_value_0-self_sponsored_tx] PASSED [ 13/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-stop-tx_value_1-zero_balance_authority] PASSED [ 14/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-stop-tx_value_1-one_wei_balance_authority] PASSED [ 15/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-stop-tx_value_1-self_sponsored_tx] PASSED [ 16/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-return-tx_value_0-zero_balance_authority] PASSED [ 17/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-return-tx_value_0-one_wei_balance_authority] PASSED [ 18/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-return-tx_value_0-self_sponsored_tx] PASSED [ 19/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-return-tx_value_1-zero_balance_authority] PASSED [ 20/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-return-tx_value_1-one_wei_balance_authority] PASSED [ 21/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-return-tx_value_1-self_sponsored_tx] PASSED [ 22/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-revert-tx_value_0-zero_balance_authority] PASSED [ 23/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-revert-tx_value_0-one_wei_balance_authority] PASSED [ 24/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-revert-tx_value_0-self_sponsored_tx] PASSED [ 25/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-revert-tx_value_1-zero_balance_authority] PASSED [ 26/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-revert-tx_value_1-one_wei_balance_authority] PASSED [ 27/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-revert-tx_value_1-self_sponsored_tx] PASSED [ 28/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-invalid-tx_value_0-zero_balance_authority] PASSED [ 29/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-invalid-tx_value_0-one_wei_balance_authority] PASSED [ 30/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-invalid-tx_value_0-self_sponsored_tx] PASSED [ 31/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-invalid-tx_value_1-zero_balance_authority] PASSED [ 32/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-invalid-tx_value_1-one_wei_balance_authority] PASSED [ 33/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-invalid-tx_value_1-self_sponsored_tx] PASSED [ 34/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-out-of-gas-tx_value_0-zero_balance_authority] PASSED [ 35/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-out-of-gas-tx_value_0-one_wei_balance_authority] PASSED [ 36/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-out-of-gas-tx_value_0-self_sponsored_tx] PASSED [ 37/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-out-of-gas-tx_value_1-zero_balance_authority] PASSED [ 38/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-out-of-gas-tx_value_1-one_wei_balance_authority] PASSED [ 39/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore[fork_Prague-state_test-out-of-gas-tx_value_1-self_sponsored_tx] PASSED [ 40/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_non_empty_storage_non_zero_nonce[fork_Prague-state_test] PASSED [ 41/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_sstore_then_sload[fork_Prague-blockchain_test] PASSED [ 42/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_tstore_reentry[fork_Prague-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test-return_opcode_RETURN] PASSED [ 43/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_tstore_reentry[fork_Prague-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test-return_opcode_REVERT] PASSED [ 44/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_tstore_reentry[fork_Prague-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test-return_opcode_RETURN] PASSED [ 45/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_tstore_reentry[fork_Prague-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test-return_opcode_REVERT] PASSED [ 46/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_tstore_reentry[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test-return_opcode_RETURN] PASSED [ 47/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_tstore_reentry[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test-return_opcode_REVERT] PASSED [ 48/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_tstore_reentry[fork_Prague-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test-return_opcode_RETURN] PASSED [ 49/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_tstore_reentry[fork_Prague-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test-return_opcode_REVERT] PASSED [ 50/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_tstore_available_at_correct_address[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test-call_eoa_first_True] PASSED [ 51/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_tstore_available_at_correct_address[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test-call_eoa_first_False] PASSED [ 52/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destruct[fork_Prague-state_test-balance_0-external_sendall_recipient_False] PASSED [ 53/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destruct[fork_Prague-state_test-balance_0-external_sendall_recipient_True] PASSED [ 54/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destruct[fork_Prague-state_test-balance_1-external_sendall_recipient_False] PASSED [ 55/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destruct[fork_Prague-state_test-balance_1-external_sendall_recipient_True] PASSED [ 56/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_contract_creator[fork_Prague-create_opcode_CREATE2-evm_code_type_LEGACY-state_test] PASSED [ 57/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_contract_creator[fork_Prague-create_opcode_CREATE-evm_code_type_LEGACY-state_test] PASSED [ 58/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_caller[fork_Prague-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test-value_0] PASSED [ 59/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_caller[fork_Prague-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test-value_1] SKIPPED [ 60/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_caller[fork_Prague-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test-value_0] PASSED [ 61/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_caller[fork_Prague-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test-value_1] SKIPPED [ 62/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_caller[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test-value_0] PASSED [ 63/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_caller[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test-value_1] PASSED [ 64/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_caller[fork_Prague-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test-value_0] PASSED [ 65/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_caller[fork_Prague-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test-value_1] PASSED [ 66/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_max_depth_call_stack[fork_Prague-state_test] SKIPPED [ 67/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_call_set_code[fork_Prague-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test-value_0] PASSED [ 68/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_call_set_code[fork_Prague-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test-value_1] SKIPPED [ 69/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_call_set_code[fork_Prague-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test-value_0] PASSED [ 70/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_call_set_code[fork_Prague-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test-value_1] SKIPPED [ 71/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_call_set_code[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test-value_0] PASSED [ 72/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_call_set_code[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test-value_1] PASSED [ 73/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_call_set_code[fork_Prague-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test-value_0] PASSED [ 74/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_call_set_code[fork_Prague-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test-value_1] PASSED [ 75/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_address_from_set_code[fork_Prague-state_test] PASSED [ 76/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_tx_into_self_delegating_set_code[fork_Prague-state_test] PASSED [ 77/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_tx_into_chain_delegating_set_code[fork_Prague-state_test] PASSED [ 78/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_call_into_self_delegating_set_code[fork_Prague-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [ 79/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_call_into_self_delegating_set_code[fork_Prague-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [ 80/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_call_into_self_delegating_set_code[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [ 81/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_call_into_self_delegating_set_code[fork_Prague-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [ 82/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_call_into_chain_delegating_set_code[fork_Prague-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [ 83/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_call_into_chain_delegating_set_code[fork_Prague-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [ 84/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_call_into_chain_delegating_set_code[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [ 85/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_call_into_chain_delegating_set_code[fork_Prague-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [ 86/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_set_code[fork_Prague-state_test-EMPTY_ACCOUNT-balance_0] PASSED [ 87/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_set_code[fork_Prague-state_test-EMPTY_ACCOUNT-balance_1] PASSED [ 88/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_set_code[fork_Prague-state_test-EOA-balance_0] PASSED [ 89/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_set_code[fork_Prague-state_test-EOA-balance_1] PASSED [ 90/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_set_code[fork_Prague-state_test-EOA_WITH_SET_CODE-balance_0] PASSED [ 91/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_set_code[fork_Prague-state_test-EOA_WITH_SET_CODE-balance_1] PASSED [ 92/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_set_code[fork_Prague-state_test-CONTRACT-balance_0] PASSED [ 93/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_set_code[fork_Prague-state_test-CONTRACT-balance_1] PASSED [ 94/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_self_set_code[fork_Prague-state_test-balance_0] PASSED [ 95/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_self_set_code[fork_Prague-state_test-balance_1] PASSED [ 96/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_address_and_authority_warm_state[fork_Prague-evm_code_type_LEGACY-state_test-call_set_code_address_first_then_authority] PASSED [ 97/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_address_and_authority_warm_state[fork_Prague-evm_code_type_LEGACY-state_test-call_authority_first_then_set_code_address] PASSED [ 98/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_address_and_authority_warm_state_call_types[fork_Prague-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test-call_set_code_address_first_then_authority] PASSED [ 99/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_address_and_authority_warm_state_call_types[fork_Prague-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test-call_authority_first_then_set_code_address] PASSED [100/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_address_and_authority_warm_state_call_types[fork_Prague-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test-call_set_code_address_first_then_authority] PASSED [101/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_address_and_authority_warm_state_call_types[fork_Prague-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test-call_authority_first_then_set_code_address] PASSED [102/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_address_and_authority_warm_state_call_types[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test-call_set_code_address_first_then_authority] PASSED [103/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_address_and_authority_warm_state_call_types[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-state_test-call_authority_first_then_set_code_address] PASSED [104/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_address_and_authority_warm_state_call_types[fork_Prague-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test-call_set_code_address_first_then_authority] PASSED [105/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_address_and_authority_warm_state_call_types[fork_Prague-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test-call_authority_first_then_set_code_address] PASSED [106/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_self_delegating_set_code[fork_Prague-state_test-balance_0] PASSED [107/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_self_delegating_set_code[fork_Prague-state_test-balance_1] PASSED [108/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_ext_code_on_chain_delegating_set_code[fork_Prague-state_test] PASSED [109/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_self_code_on_set_code[fork_Prague-state_test-balance_0] PASSED [110/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_self_code_on_set_code[fork_Prague-state_test-balance_1] PASSED [111/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_account_deployed_in_same_tx[fork_Prague-create_opcode_CREATE2-evm_code_type_LEGACY-state_test] PASSED [112/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_account_deployed_in_same_tx[fork_Prague-create_opcode_CREATE-evm_code_type_LEGACY-state_test] PASSED [113/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE-call_set_code_first_False-balance_0-external_sendall_recipient_False] PASSED [114/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE-call_set_code_first_False-balance_0-external_sendall_recipient_True] PASSED [115/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE-call_set_code_first_False-balance_1-external_sendall_recipient_False] PASSED [116/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE-call_set_code_first_False-balance_1-external_sendall_recipient_True] PASSED [117/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE-call_set_code_first_True-balance_0-external_sendall_recipient_False] PASSED [118/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE-call_set_code_first_True-balance_0-external_sendall_recipient_True] PASSED [119/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE-call_set_code_first_True-balance_1-external_sendall_recipient_False] PASSED [120/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE-call_set_code_first_True-balance_1-external_sendall_recipient_True] PASSED [121/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE2-call_set_code_first_False-balance_0-external_sendall_recipient_False] PASSED [122/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE2-call_set_code_first_False-balance_0-external_sendall_recipient_True] PASSED [123/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE2-call_set_code_first_False-balance_1-external_sendall_recipient_False] PASSED [124/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE2-call_set_code_first_False-balance_1-external_sendall_recipient_True] PASSED [125/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE2-call_set_code_first_True-balance_0-external_sendall_recipient_False] PASSED [126/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE2-call_set_code_first_True-balance_0-external_sendall_recipient_True] PASSED [127/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE2-call_set_code_first_True-balance_1-external_sendall_recipient_False] PASSED [128/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_self_destructing_account_deployed_in_same_tx[fork_Prague-state_test-create_opcode_CREATE2-call_set_code_first_True-balance_1-external_sendall_recipient_True] PASSED [129/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_multiple_first_valid_authorization_tuples_same_signer[fork_Prague-state_test] PASSED [130/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_multiple_valid_authorization_tuples_same_signer_increasing_nonce[fork_Prague-state_test] PASSED [131/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_multiple_valid_authorization_tuples_same_signer_increasing_nonce_self_sponsored[fork_Prague-state_test] PASSED [132/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_multiple_valid_authorization_tuples_first_invalid_same_signer[fork_Prague-state_test] PASSED [133/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_all_invalid_authorization_tuples[fork_Prague-state_test] PASSED [134/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_chain_specific_id[fork_Prague-state_test] FAILED [135/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=0,r=1,s=1] FAILED [136/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=1,r=1,s=1] FAILED [137/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=0,r=SECP256K1N-2,s=1] FAILED [138/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=1,r=SECP256K1N-2,s=1] FAILED [139/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=0,r=1,s=SECP256K1N_OVER_2] FAILED [140/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=1,r=1,s=SECP256K1N_OVER_2] FAILED [141/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-v=2] PASSED [142/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-v=27] PASSED [143/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-v=28] PASSED [144/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-v=35] PASSED [145/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-v=36] PASSED [146/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-v=2**8-1] PASSED [147/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-r=0] PASSED [148/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-r=SECP256K1N-1] PASSED [149/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-r=SECP256K1N] PASSED [150/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-r=SECP256K1N+1] PASSED [151/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-r=2**256-1] PASSED [152/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-s=0] PASSED [153/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-s=SECP256K1N_OVER_2-1] PASSED [154/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-s=SECP256K1N_OVER_2] PASSED [155/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-s=SECP256K1N_OVER_2+1] PASSED [156/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-s=SECP256K1N-1] PASSED [157/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-s=SECP256K1N] PASSED [158/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-s=SECP256K1N+1] PASSED [159/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-s=2**256-1] PASSED [160/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-v=r=s=0] PASSED [161/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_auth_signature[fork_Prague-state_test-v=2**8-1,r=s=2**256-1] PASSED [162/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_signature_s_out_of_range[fork_Prague-state_test] PASSED [163/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_chain_id[fork_Prague-state_test-auth_chain_id=2**256-1] PASSED [164/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_valid_tx_invalid_chain_id[fork_Prague-state_test-chain_id=2] PASSED [165/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_nonce_validity[fork_Prague-state_test-nonce=2**64-1] SKIPPED [166/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_nonce_validity[fork_Prague-state_test-nonce=2**64-2] SKIPPED [167/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_nonce_validity[fork_Prague-state_test-nonce=1,account_nonce=0] FAILED [168/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_nonce_validity[fork_Prague-state_test-nonce=0,account_nonce=1] FAILED [169/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_nonce_overflow_after_first_authorization[fork_Prague-state_test] SKIPPED [170/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_log[fork_Prague-evm_code_type_LEGACY-state_test-log_opcode_LOG0] PASSED [171/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_log[fork_Prague-evm_code_type_LEGACY-state_test-log_opcode_LOG1] PASSED [172/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_log[fork_Prague-evm_code_type_LEGACY-state_test-log_opcode_LOG2] PASSED [173/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_log[fork_Prague-evm_code_type_LEGACY-state_test-log_opcode_LOG3] PASSED [174/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_log[fork_Prague-evm_code_type_LEGACY-state_test-log_opcode_LOG4] PASSED [175/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000b-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [176/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000b-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [177/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000b-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [178/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000b-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [179/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000c-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [180/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000c-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [181/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000c-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [182/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000c-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [183/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000d-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [184/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000d-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [185/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000d-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [186/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000d-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [187/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000e-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [188/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000e-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [189/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000e-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [190/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000e-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [191/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000f-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [192/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000f-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [193/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000f-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [194/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000f-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [195/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000010-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [196/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000010-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [197/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000010-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [198/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000010-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [199/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000011-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [200/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000011-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [201/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000011-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [202/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000011-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [203/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000a-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [204/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000a-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [205/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000a-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [206/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x000000000000000000000000000000000000000a-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [207/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000009-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [208/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000009-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [209/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000009-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [210/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000009-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [211/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000005-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [212/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000005-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [213/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000005-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [214/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000005-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [215/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000006-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [216/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000006-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [217/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000006-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [218/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000006-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [219/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000007-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [220/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000007-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [221/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000007-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [222/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000007-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [223/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000008-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [224/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000008-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [225/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000008-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [226/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000008-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [227/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000001-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [228/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000001-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [229/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000001-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [230/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000001-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [231/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000002-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [232/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000002-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [233/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000002-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [234/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000002-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [235/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000003-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [236/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000003-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [237/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000003-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [238/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000003-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [239/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000004-call_opcode_STATICCALL-evm_code_type_LEGACY-state_test] PASSED [240/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000004-call_opcode_DELEGATECALL-evm_code_type_LEGACY-state_test] PASSED [241/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000004-call_opcode_CALL-evm_code_type_LEGACY-state_test] PASSED [242/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile[fork_Prague-precompile_0x0000000000000000000000000000000000000004-call_opcode_CALLCODE-evm_code_type_LEGACY-state_test] PASSED [243/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x000000000000000000000000000000000000000b-state_test] PASSED [244/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x000000000000000000000000000000000000000c-state_test] PASSED [245/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x000000000000000000000000000000000000000d-state_test] PASSED [246/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x000000000000000000000000000000000000000e-state_test] PASSED [247/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x000000000000000000000000000000000000000f-state_test] PASSED [248/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x0000000000000000000000000000000000000010-state_test] PASSED [249/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x0000000000000000000000000000000000000011-state_test] PASSED [250/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x000000000000000000000000000000000000000a-state_test] PASSED [251/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x0000000000000000000000000000000000000009-state_test] PASSED [252/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x0000000000000000000000000000000000000005-state_test] PASSED [253/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x0000000000000000000000000000000000000006-state_test] PASSED [254/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x0000000000000000000000000000000000000007-state_test] PASSED [255/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x0000000000000000000000000000000000000008-state_test] PASSED [256/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x0000000000000000000000000000000000000001-state_test] PASSED [257/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x0000000000000000000000000000000000000002-state_test] PASSED [258/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x0000000000000000000000000000000000000003-state_test] PASSED [259/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_precompile_not_enough_gas_for_precompile_execution[fork_Prague-precompile_0x0000000000000000000000000000000000000004-state_test] PASSED [260/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x00000000219ab540356cbb839cbe05303d7705fa-blockchain_test] FAILED [261/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x00000961ef480eb55e80d19ad83579a64c007002-blockchain_test] FAILED [262/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x0000bbddc7ce488642fb579f8b00f3a590007251-blockchain_test] FAILED [263/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x0000f90827f1c53a10cb7a02335b175320002935-blockchain_test] FAILED [264/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x000f3df6d732807ef1319fb7b8bb8522d0beac02-blockchain_test] FAILED [265/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_eoa_tx_after_set_code[fork_Prague-tx_type_3-evm_code_type_LEGACY-blockchain_test-same_block] SKIPPED [266/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_eoa_tx_after_set_code[fork_Prague-tx_type_3-evm_code_type_LEGACY-blockchain_test-different_block] SKIPPED [267/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_eoa_tx_after_set_code[fork_Prague-tx_type_2-evm_code_type_LEGACY-blockchain_test-same_block] SKIPPED [268/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_eoa_tx_after_set_code[fork_Prague-tx_type_2-evm_code_type_LEGACY-blockchain_test-different_block] FAILED [269/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_eoa_tx_after_set_code[fork_Prague-tx_type_1-evm_code_type_LEGACY-blockchain_test-same_block] SKIPPED [270/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_eoa_tx_after_set_code[fork_Prague-tx_type_1-evm_code_type_LEGACY-blockchain_test-different_block] PASSED [271/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_eoa_tx_after_set_code[fork_Prague-tx_type_0-evm_code_type_LEGACY-blockchain_test-same_block] SKIPPED [272/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_eoa_tx_after_set_code[fork_Prague-tx_type_0-evm_code_type_LEGACY-blockchain_test-different_block] SKIPPED [273/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_reset_code[fork_Prague-blockchain_test-not_self_sponsored] PASSED [274/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_reset_code[fork_Prague-blockchain_test-self_sponsored] PASSED [275/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_contract_create[fork_Prague-state_test] PASSED [276/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_empty_authorization_list[fork_Prague-state_test] FAILED [277/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing[fork_Prague-state_test-delegated_account-not_self_sponsored] PASSED [278/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing[fork_Prague-state_test-delegated_account-self_sponsored] PASSED [279/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing[fork_Prague-state_test-undelegated_account-not_self_sponsored] PASSED [280/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing[fork_Prague-state_test-undelegated_account-self_sponsored] PASSED [281/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing_tx_to[fork_Prague-state_test-delegated_account-not_self_sponsored] PASSED [282/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing_tx_to[fork_Prague-state_test-delegated_account-self_sponsored] PASSED [283/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing_tx_to[fork_Prague-state_test-undelegated_account-not_self_sponsored] PASSED [284/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing_tx_to[fork_Prague-state_test-undelegated_account-self_sponsored] PASSED [285/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing_and_set[fork_Prague-state_test-delegated_account] PASSED [286/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing_and_set[fork_Prague-state_test-undelegated_account] PASSED [287/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing_failing_tx[fork_Prague-state_test-out_of_gas] PASSED [288/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing_failing_tx[fork_Prague-state_test-invalid_opcode] PASSED [289/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_delegation_clearing_failing_tx[fork_Prague-state_test-revert] PASSED [290/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_deploying_delegation_designation_contract[fork_Prague-state_test-initcode_deploys_delegation_designation] PASSED [291/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_deploying_delegation_designation_contract[fork_Prague-state_test-initcode_is_delegation_designation] PASSED [292/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_creating_delegation_designation_contract[fork_Prague-state_test-create_opcode_CREATE-initcode_deploys_delegation_designation] PASSED [293/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_creating_delegation_designation_contract[fork_Prague-state_test-create_opcode_CREATE-initcode_is_delegation_designation] PASSED [294/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_creating_delegation_designation_contract[fork_Prague-state_test-create_opcode_CREATE2-initcode_deploys_delegation_designation] PASSED [295/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_creating_delegation_designation_contract[fork_Prague-state_test-create_opcode_CREATE2-initcode_is_delegation_designation] PASSED [296/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_many_delegations[fork_Prague-state_test-empty_balance] PASSED [297/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_many_delegations[fork_Prague-state_test-non_empty_balance] SKIPPED [298/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_invalid_transaction_after_authorization[fork_Prague-blockchain_test] FAILED [299/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_authorization_reusing_nonce[fork_Prague-blockchain_test] FAILED [300/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_from_account_with_non_delegating_code[fork_Prague-state_test-self_sponsored_True-EMPTY_ACCOUNT] SKIPPED [301/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_from_account_with_non_delegating_code[fork_Prague-state_test-self_sponsored_True-EOA] SKIPPED [302/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_from_account_with_non_delegating_code[fork_Prague-state_test-self_sponsored_True-EOA_WITH_SET_CODE] SKIPPED [303/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_from_account_with_non_delegating_code[fork_Prague-state_test-self_sponsored_True-CONTRACT] SKIPPED [304/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_from_account_with_non_delegating_code[fork_Prague-state_test-self_sponsored_False-EMPTY_ACCOUNT] SKIPPED [305/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_from_account_with_non_delegating_code[fork_Prague-state_test-self_sponsored_False-EOA] SKIPPED [306/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_from_account_with_non_delegating_code[fork_Prague-state_test-self_sponsored_False-EOA_WITH_SET_CODE] SKIPPED [307/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_from_account_with_non_delegating_code[fork_Prague-state_test-self_sponsored_False-CONTRACT] SKIPPED [308/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_transaction_fee_validations[fork_Prague-state_test-insufficient_max_fee_per_gas] PASSED [309/310]
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_transaction_fee_validations[fork_Prague-state_test-priority_greater_than_max_fee_per_gas] PASSED [310/310]
+
+=================================== FAILURES ===================================
+________ test_set_code_using_chain_specific_id[fork_Prague-state_test] _________
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2064: in test_set_code_using_chain_specific_id
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:56: in execute
+    assert code == account.code, (
+E   AssertionError: Code of 0x6545aaf047e84d6366fe25005a5753c00f9a7f03 is 0x, expected 0xef010042ab6cb5538abadc0bb6856cb095718c1eff5451.
+E   assert b'' == b'\xef\x01\x0...x8c\x1e\xffTQ'
+E     
+E     Full diff:
+E     - (b'\xef\x01\x00B\xabl\xb5S\x8a\xba\xdc\x0b\xb6\x85l\xb0\x95q\x8c\x1e\xffTQ')
+E     + b''
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108878
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000033146200000000
+_ test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=0,r=1,s=1] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2127: in test_set_code_using_valid_synthetic_signatures
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:56: in execute
+    assert code == account.code, (
+E   AssertionError: Code of 0x0caad0cd62f4dc47007fad1d5a8e84247a6af6c1 is 0x, expected 0xef01000b830dd12ab4015cd233ea7f6300906991bcb050.
+E   assert b'' == b'\xef\x01\x0...\x91\xbc\xb0P'
+E     
+E     Full diff:
+E     - (b'\xef\x01\x00\x0b\x83\r\xd1*\xb4\x01\\\xd23\xea\x7fc\x00\x90i\x91\xbc\xb0P')
+E     + b''
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108878
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000033146200000000
+_ test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=1,r=1,s=1] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2127: in test_set_code_using_valid_synthetic_signatures
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:56: in execute
+    assert code == account.code, (
+E   AssertionError: Code of 0xd65da3316b378df0f59eaa8d0462b24997958125 is 0x, expected 0xef0100b3a2dc8d8a8a439f3cf601012fe6943ebb3dde1d.
+E   assert b'' == b'\xef\x01\x0...\xbb=\xde\x1d'
+E     
+E     Full diff:
+E     + b''
+E     - (b'\xef\x01\x00\xb3\xa2\xdc\x8d\x8a\x8aC\x9f<\xf6\x01\x01/\xe6\x94>\xbb'
+E     -  b'=\xde\x1d')
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108878
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000033146200000000
+_ test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=0,r=SECP256K1N-2,s=1] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2127: in test_set_code_using_valid_synthetic_signatures
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:56: in execute
+    assert code == account.code, (
+E   AssertionError: Code of 0x7f34d2249df7fa0a273a90f9c95f39fbf8aec1d7 is 0x, expected 0xef0100a3830d6d3f078327608f383f38579c4c9a527140.
+E   assert b'' == b"\xef\x01\x0...W\x9cL\x9aRq@"
+E     
+E     Full diff:
+E     - (b"\xef\x01\x00\xa3\x83\rm?\x07\x83'`\x8f8?8W\x9cL\x9aRq@")
+E     + b''
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108878
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000033146200000000
+_ test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=1,r=SECP256K1N-2,s=1] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2127: in test_set_code_using_valid_synthetic_signatures
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:56: in execute
+    assert code == account.code, (
+E   AssertionError: Code of 0xc2c2b1433e83d05cd029029474645af207623794 is 0x, expected 0xef01002d87baf49fde4d3c9fba9c11f50de2c2836cc678.
+E   assert b'' == b'\xef\x01\x0...xc2\x83l\xc6x'
+E     
+E     Full diff:
+E     - (b'\xef\x01\x00-\x87\xba\xf4\x9f\xdeM<\x9f\xba\x9c\x11\xf5\r\xe2\xc2\x83l\xc6x')
+E     + b''
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108878
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000033146200000000
+_ test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=0,r=1,s=SECP256K1N_OVER_2] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2127: in test_set_code_using_valid_synthetic_signatures
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:56: in execute
+    assert code == account.code, (
+E   AssertionError: Code of 0x4d27a89672c3ac6e83d09a91f90cfb65f1a792b8 is 0x, expected 0xef01000a76d47c5bca72c299add956486cc73e812cfd0c.
+E   assert b'' == b'\xef\x01\x0...\x81,\xfd\x0c'
+E     
+E     Full diff:
+E     - (b'\xef\x01\x00\nv\xd4|[\xcar\xc2\x99\xad\xd9VHl\xc7>\x81,\xfd\x0c')
+E     + b''
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108878
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000033146200000000
+_ test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=1,r=1,s=SECP256K1N_OVER_2] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2127: in test_set_code_using_valid_synthetic_signatures
+    state_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:56: in execute
+    assert code == account.code, (
+E   AssertionError: Code of 0x4366e40d3bc944a47d2152561994078c4ebad4f8 is 0x, expected 0xef01003c50af1b3b7766ecc27310c6e93e98c4071816bd.
+E   assert b'' == b'\xef\x01\x0...7\x18\x16\xbd'
+E     
+E     Full diff:
+E     - (b'\xef\x01\x00<P\xaf\x1b;wf\xec\xc2s\x10\xc6\xe9>\x98\xc4\x07\x18\x16\xbd')
+E     + b''
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108878
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000033146200000000
+_____ test_nonce_validity[fork_Prague-state_test-nonce=1,account_nonce=0] ______
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2371: in test_nonce_validity
+    auth_signer = pre.fund_eoa(auth_account_start_balance, nonce=account_nonce)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:235: in fund_eoa
+    assert nonce is None, "nonce parameter is not supported for execute"
+E   AssertionError: nonce parameter is not supported for execute
+E   assert 0 is None
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_____ test_nonce_validity[fork_Prague-state_test-nonce=0,account_nonce=1] ______
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2371: in test_nonce_validity
+    auth_signer = pre.fund_eoa(auth_account_start_balance, nonce=account_nonce)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:235: in fund_eoa
+    assert nonce is None, "nonce parameter is not supported for execute"
+E   AssertionError: nonce parameter is not supported for execute
+E   assert 1 is None
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_ test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x00000000219ab540356cbb839cbe05303d7705fa-blockchain_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2722: in test_set_code_to_system_contract
+    raise ValueError(f"Not implemented system contract: {system_contract}")
+E   ValueError: Not implemented system contract: 0x00000000219ab540356cbb839cbe05303d7705fa
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 588900
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000043144200000000
+_ test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x00000961ef480eb55e80d19ad83579a64c007002-blockchain_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2722: in test_set_code_to_system_contract
+    raise ValueError(f"Not implemented system contract: {system_contract}")
+E   ValueError: Not implemented system contract: 0x00000961ef480eb55e80d19ad83579a64c007002
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_ test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x0000bbddc7ce488642fb579f8b00f3a590007251-blockchain_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2722: in test_set_code_to_system_contract
+    raise ValueError(f"Not implemented system contract: {system_contract}")
+E   ValueError: Not implemented system contract: 0x0000bbddc7ce488642fb579f8b00f3a590007251
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+_ test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x0000f90827f1c53a10cb7a02335b175320002935-blockchain_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2768: in test_set_code_to_system_contract
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x00 of 0x0bb2edffa9bee3081f63e15e8d6c6483033437b7 is 0x0000000000000000000000000000000000000000000000000000000000000000,expected 0x01.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' == 1
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 127292
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000034899300000000
+_ test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x000f3df6d732807ef1319fb7b8bb8522d0beac02-blockchain_test] _
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2768: in test_set_code_to_system_contract
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:66: in execute
+    assert storage_value == value, (
+E   AssertionError: Storage value at 0x01 of 0xd0ce502941aed3009128d3839b2072bbb94b68fb is 0x0000000000000000000000000000000000000000000000000000000000000000,expected 0x20.
+E   assert b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' == 32
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 108878
+Deploying contract with gas limit: 125996
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000051407800000000
+_ test_eoa_tx_after_set_code[fork_Prague-tx_type_2-evm_code_type_LEGACY-blockchain_test-different_block] _
+src/ethereum_test_rpc/rpc.py:209: in send_transaction
+    self.post_request("sendRawTransaction", f"{transaction.rlp().hex()}")
+src/ethereum_test_rpc/rpc.py:100: in post_request
+    raise JSONRPCError(**response_json["error"])
+E   ethereum_test_rpc.types.JSONRPCError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x70727f4B6709841cA89703dC4D72aa8161dc73a7, maxFeePerGas: 1000 baseFee: 100000000)
+
+The above exception was the direct cause of the following exception:
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:2913: in test_eoa_tx_after_set_code
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:40: in execute
+    eth_rpc.send_wait_transactions([tx.with_signature_and_sender() for tx in block])
+src/ethereum_test_rpc/rpc.py:290: in send_wait_transactions
+    self.send_transactions(transactions)
+src/ethereum_test_rpc/rpc.py:219: in send_transactions
+    return [self.send_transaction(tx) for tx in transactions]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:219: in <listcomp>
+    return [self.send_transaction(tx) for tx in transactions]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+src/ethereum_test_rpc/rpc.py:215: in send_transaction
+    raise SendTransactionExceptionError(str(e), tx=transaction) from e
+E   ethereum_test_rpc.rpc.SendTransactionExceptionError: JSONRPCError(code=-32000, message=max fee per gas less than block base fee: address 0x70727f4B6709841cA89703dC4D72aa8161dc73a7, maxFeePerGas: 1000 baseFee: 100000000)
+----------------------------- Captured stdout call -----------------------------
+Deploying contract with gas limit: 110606
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000057293800000000
+____________ test_empty_authorization_list[fork_Prague-state_test] _____________
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:3038: in test_empty_authorization_list
+    to=pre.deploy_contract(code=b""),
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/pytest_plugins/execute/pre_alloc.py:168: in deploy_contract
+    assert isinstance(code, Bytecode) or isinstance(code, Container), (
+E   AssertionError: incompatible code type: <class 'bytes'>
+E   assert (False or False)
+E    +  where False = isinstance(b'', Bytecode)
+E    +  and   False = isinstance(b'', Container)
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000000000000000000
+__ test_invalid_transaction_after_authorization[fork_Prague-blockchain_test] ___
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:3545: in test_invalid_transaction_after_authorization
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:47: in execute
+    assert balance == 0, f"Balance of {address} is {balance}, expected 0."
+E   AssertionError: Balance of 0x0000000000000000000000000000000000000000 is 342317364142530004, expected 0.
+E   assert 342317364142530004 == 0
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000049880000000000
+________ test_authorization_reusing_nonce[fork_Prague-blockchain_test] _________
+tests/prague/eip7702_set_code_tx/test_set_code_txs.py:3592: in test_authorization_reusing_nonce
+    blockchain_test(
+src/pytest_plugins/execute/execute.py:321: in __init__
+    execute.execute(fork=fork, eth_rpc=eth_rpc, engine_rpc=engine_rpc)
+src/ethereum_test_execution/transaction_post.py:52: in execute
+    assert balance == account.balance, (
+E   AssertionError: Balance of 0x0000000000000000000000000000000000000000 is 342332464142530005, expected 0x01.
+E   assert 342332464142530005 == 1
+E    +  where 1 = Account(nonce=0, balance=1, code=b'', storage=Storage(root={})).balance
+--------------------------- Captured stdout teardown ---------------------------
+Used balance=0.000052900000000001
+=========================== short test summary info ============================
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_chain_specific_id[fork_Prague-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=0,r=1,s=1]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=1,r=1,s=1]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=0,r=SECP256K1N-2,s=1]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=1,r=SECP256K1N-2,s=1]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=0,r=1,s=SECP256K1N_OVER_2]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_using_valid_synthetic_signatures[fork_Prague-state_test-v=1,r=1,s=SECP256K1N_OVER_2]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_nonce_validity[fork_Prague-state_test-nonce=1,account_nonce=0]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_nonce_validity[fork_Prague-state_test-nonce=0,account_nonce=1]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x00000000219ab540356cbb839cbe05303d7705fa-blockchain_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x00000961ef480eb55e80d19ad83579a64c007002-blockchain_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x0000bbddc7ce488642fb579f8b00f3a590007251-blockchain_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x0000f90827f1c53a10cb7a02335b175320002935-blockchain_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_set_code_to_system_contract[fork_Prague-call_opcode_CALL-evm_code_type_LEGACY-system_contract_0x000f3df6d732807ef1319fb7b8bb8522d0beac02-blockchain_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_eoa_tx_after_set_code[fork_Prague-tx_type_2-evm_code_type_LEGACY-blockchain_test-different_block]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_empty_authorization_list[fork_Prague-state_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_invalid_transaction_after_authorization[fork_Prague-blockchain_test]
+FAILED tests/prague/eip7702_set_code_tx/test_set_code_txs.py::test_authorization_reusing_nonce[fork_Prague-blockchain_test]
+============ 18 failed, 269 passed, 23 skipped in 316.51s (0:05:16) ============
