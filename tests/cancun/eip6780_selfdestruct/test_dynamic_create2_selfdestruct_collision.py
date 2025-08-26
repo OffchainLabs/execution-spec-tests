@@ -28,9 +28,6 @@ REFERENCE_SPEC_GIT_PATH = "EIPS/eip-6780.md"
 REFERENCE_SPEC_VERSION = "1b6a0e94cc47e859b9866e570391cf37dc55059a"
 
 
-# @pytest.mark.execute(
-#     pytest.mark.skip(reason="Tests are not allowed to set pre-alloc items in execute mode")
-# )
 @pytest.mark.valid_from("Paris")
 @pytest.mark.parametrize(
     "create2_dest_already_in_state",
