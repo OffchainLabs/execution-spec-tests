@@ -1343,29 +1343,6 @@ class Prague(Cancun):
     }
 
     @classmethod
-    def precompiles(cls, block_number: int = 0, timestamp: int = 0) -> List[Address]:
-        """
-        At Prague, pre-compile for BLS operations are added.
-
-        BLS12_G1ADD = 0x0B
-        BLS12_G1MSM = 0x0C
-        BLS12_G2ADD = 0x0D
-        BLS12_G2MSM = 0x0E
-        BLS12_PAIRING_CHECK = 0x0F
-        BLS12_MAP_FP_TO_G1 = 0x10
-        BLS12_MAP_FP2_TO_G2 = 0x11
-        """
-        return [
-            Address(11, label="BLS12_G1ADD"),
-            Address(12, label="BLS12_G1MSM"),
-            Address(13, label="BLS12_G2ADD"),
-            Address(14, label="BLS12_G2MSM"),
-            Address(15, label="BLS12_PAIRING_CHECK"),
-            Address(16, label="BLS12_MAP_FP_TO_G1"),
-            Address(17, label="BLS12_MAP_FP2_TO_G2"),
-        ] + super(Prague, cls).precompiles(block_number, timestamp)
-
-    @classmethod
     def tx_types(cls, block_number: int = 0, timestamp: int = 0) -> List[int]:
         """At Prague, set-code type transactions are introduced."""
         return [4] + super(Prague, cls).tx_types(block_number, timestamp)
