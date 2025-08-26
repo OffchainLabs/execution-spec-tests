@@ -2879,7 +2879,7 @@ def test_eoa_tx_after_set_code(
                     gas_limit=500_000,
                     to=auth_signer,
                     value=0,
-                    max_fee_per_gas=1_000,
+                    max_fee_per_gas=1000000000,
                     max_priority_fee_per_gas=1_000,
                 )
             )
@@ -2891,7 +2891,7 @@ def test_eoa_tx_after_set_code(
                     gas_limit=500_000,
                     to=auth_signer,
                     value=0,
-                    max_fee_per_gas=1_000,
+                    max_fee_per_gas=1000000000,
                     max_priority_fee_per_gas=1_000,
                     max_fee_per_blob_gas=fork.min_base_fee_per_blob_gas() * 10,
                     blob_versioned_hashes=add_kzg_version(

@@ -13,11 +13,9 @@ from ethereum_test_tools import (
     CodeGasMeasure,
     Environment,
     Hash,
-    StateTestFiller,
-    Transaction,
-    TransactionException,
 )
 from ethereum_test_tools import Opcodes as Op
+from ethereum_test_tools import StateTestFiller, Transaction, TransactionException
 
 REFERENCE_SPEC_GIT_PATH = "EIPS/eip-2930.md"
 REFERENCE_SPEC_VERSION = "c9db53a936c5c9cbe2db32ba0d1b86c4c6e73534"
@@ -98,7 +96,7 @@ def test_account_storage_warm_cold_state(
 
     tx = Transaction(
         ty=1,
-        chain_id=0x01,
+        chain_id=412346,
         data=tx_data,
         to=contract_address,
         gas_limit=tx_gas_limit,
@@ -236,7 +234,7 @@ def test_transaction_intrinsic_gas_cost(
 
     tx = Transaction(
         ty=1,
-        chain_id=0x01,
+        chain_id=412346,
         data=tx_data,
         to=contract_address,
         value=tx_value,

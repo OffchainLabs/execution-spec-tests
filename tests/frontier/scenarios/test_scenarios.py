@@ -208,7 +208,7 @@ def test_scenarios(
         if scenario.category == "double_call_combinations":
             tx_max_gas *= 2
 
-        tx_gasprice: int = 10
+        tx_gasprice: int = 1000000000
         exec_env = ExecutionEnvironment(
             fork=fork,
             origin=tx_origin,

@@ -1389,18 +1389,6 @@ class Prague(Cancun):
         """Prague introduces the system contracts for EIP-6110, EIP-7002, EIP-7251 and EIP-2935."""
         return [
             Address(
-                0x00000000219AB540356CBB839CBE05303D7705FA,
-                label="DEPOSIT_CONTRACT_ADDRESS",
-            ),
-            Address(
-                0x00000961EF480EB55E80D19AD83579A64C007002,
-                label="WITHDRAWAL_REQUEST_PREDEPLOY_ADDRESS",
-            ),
-            Address(
-                0x0000BBDDC7CE488642FB579F8B00F3A590007251,
-                label="CONSOLIDATION_REQUEST_PREDEPLOY_ADDRESS",
-            ),
-            Address(
                 0x0000F90827F1C53A10CB7A02335B175320002935,
                 label="HISTORY_STORAGE_ADDRESS",
             ),
@@ -1431,19 +1419,6 @@ class Prague(Cancun):
             if floor:
                 return tokens * gas_costs.G_TX_DATA_FLOOR_TOKEN_COST
             return tokens * gas_costs.G_TX_DATA_STANDARD_TOKEN_COST
-
-        return fn
-
-    @classmethod
-    def transaction_data_floor_cost_calculator(
-        cls, block_number: int = 0, timestamp: int = 0
-    ) -> TransactionDataFloorCostCalculator:
-        """On Prague, due to EIP-7623, the transaction data floor cost is introduced."""
-        calldata_gas_calculator = cls.calldata_gas_calculator(block_number, timestamp)
-        gas_costs = cls.gas_costs(block_number, timestamp)
-
-        def fn(*, data: BytesConvertible) -> int:
-            return calldata_gas_calculator(data=data, floor=True) + gas_costs.G_TRANSACTION
 
         return fn
 

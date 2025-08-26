@@ -8,17 +8,9 @@ from typing import List
 import pytest
 
 from ethereum_test_forks import Fork
-from ethereum_test_tools import (
-    AccessList,
-    Address,
-    Alloc,
-    Bytes,
-    Environment,
-    StateTestFiller,
-    Transaction,
-    TransactionException,
-)
+from ethereum_test_tools import AccessList, Address, Alloc, Bytes, Environment
 from ethereum_test_tools import Opcodes as Op
+from ethereum_test_tools import StateTestFiller, Transaction, TransactionException
 
 from .spec import ref_spec_2930
 
