@@ -3028,6 +3028,9 @@ def test_contract_create(
     )
 
 
+@pytest.mark.execute(
+    pytest.mark.skip(reason="Execute mode doesn't support deploying empty contracts")
+)
 @pytest.mark.exception_test
 def test_empty_authorization_list(
     state_test: StateTestFiller,
