@@ -7,17 +7,9 @@ from typing import Dict, List
 
 import pytest
 
-from ethereum_test_tools import (
-    Account,
-    Address,
-    Alloc,
-    Block,
-    BlockchainTestFiller,
-    Bytecode,
-    Storage,
-    Transaction,
-)
+from ethereum_test_tools import Account, Address, Alloc, Block, BlockchainTestFiller, Bytecode
 from ethereum_test_tools import Opcodes as Op
+from ethereum_test_tools import Storage, Transaction
 
 from .spec import Spec, ref_spec_2935
 
@@ -233,8 +225,7 @@ def test_block_hashes_history(
     new one.
     """
     blocks: List[Block] = []
-
-    sender = pre.fund_eoa(10_000_000_000)
+    sender = pre.fund_eoa(100_000_000_000_000_000)
     post: Dict[Address, Account] = {}
     current_block_number = 1
     fork_block_number = 0  # We fork at genesis

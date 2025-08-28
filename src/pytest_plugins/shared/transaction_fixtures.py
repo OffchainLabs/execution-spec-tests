@@ -106,13 +106,13 @@ def type_4_default_transaction(sender, pre):
         ],
         authorization_list=[
             AuthorizationTuple(
-                chain_id=1,
+                chain_id=412346,
                 address=target1,
                 nonce=0,
                 signer=auth_signer1,
             ),
             AuthorizationTuple(
-                chain_id=1,
+                chain_id=412346,
                 address=target2,
                 nonce=0,
                 signer=auth_signer2,

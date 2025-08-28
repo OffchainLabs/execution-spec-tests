@@ -109,7 +109,7 @@ def test_invalid_auth_signature(
             AuthorizationTuple(
                 address=delegate_address,
                 nonce=0,
-                chain_id=1,
+                chain_id=412346,
                 v=v,
                 r=r,
                 s=s,
