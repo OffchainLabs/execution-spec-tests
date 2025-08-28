@@ -3,13 +3,7 @@
 import pytest  # type: ignore
 
 from ethereum_test_forks import Fork
-from ethereum_test_tools import (
-    Account,
-    Alloc,
-    Environment,
-    StateTestFiller,
-    Transaction,
-)
+from ethereum_test_tools import Account, Alloc, Environment, StateTestFiller, Transaction
 from ethereum_test_tools.code.generators import CodeGasMeasure
 from ethereum_test_tools.vm.opcode import Opcodes as Op
 
@@ -79,6 +73,7 @@ def test_call_large_offset_mstore(
 
 # TODO: There's an issue with gas definitions on forks previous to Berlin, remove this when fixed.
 # https://github.com/ethereum/execution-spec-tests/pull/1952#discussion_r2237634275
+@pytest.mark.execute(pytest.mark.skip(reason="This test implements L1's gas behavior"))
 @pytest.mark.valid_from("Berlin")
 def test_call_memory_expands_on_early_revert(
     state_test: StateTestFiller,
