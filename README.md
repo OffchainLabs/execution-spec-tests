@@ -1,3 +1,5 @@
+# ⚠️ Deprecated: please use https://github.com/OffchainLabs/execution-specs ⚠️
+
 # Arbitrum Execution Spec Tests
 
 This is a fork of https://github.com/ethereum/execution-spec-tests
